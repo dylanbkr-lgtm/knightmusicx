@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Example: pretty URL redirects (uncomment to use)
+# [[redirects]]
+#   from = "/victoria"
+#   to = "/artists/victoria.html"
+#   status = 301

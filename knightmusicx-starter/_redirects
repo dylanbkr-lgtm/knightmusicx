@@ -1,0 +1,22 @@
+# Add custom redirects here if needed
+
+# Artist shortlinks
+/victoria   /artists/victoria-victrola.html   301
+/cabbage   /artists/lil-cabbage.html   301
+/marcy   /artists/marcy-daydream.html   301
+/bvb   /artists/baie-verte-b-ys.html   301
+/cedar   /artists/cedrhllw.html   301
+/stplaid   /artists/st-plaid.html   301
+/snacktrap   /artists/snacktrap.html   301
+
+# --- Shortlinks ---
+/victoria            /artists/victoria-victrola.html      301
+/cabbage             /artists/lil-cabbage.html            301
+/marcy               /artists/marcy-daydream.html         301
+/bvb                 /artists/baie-verte-b-ys.html        301
+/cedarhollow         /artists/cedrhllw.html               301
+/stplaid             /artists/st-plaid.html               301
+/snacktrap           /artists/snacktrap.html              301
+/knight              /artists/knight.html                 301
+/sparrow             /artists/dylan-sparrow.html          301
+/lore                /lore/                               301

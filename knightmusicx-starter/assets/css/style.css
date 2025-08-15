@@ -1,0 +1,148 @@
+/* Knight Musix X starter styles */
+:root {
+  --bg: #0b0c0f;
+  --bg-alt: #101216;
+  --text: #e7e9ee;
+  --muted: #a7adbb;
+  --brand: #9b87f5;
+  --card: #11141a;
+  --border: #1c2030;
+  --focus: #c1f37d;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.wrap { width: min(1100px, 92vw); margin: 0 auto; }
+
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(11,12,15,0.8); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
+.brand { font-weight: 800; letter-spacing: .5px; color: var(--text); text-decoration: none; }
+.nav a { color: var(--muted); text-decoration: none; margin-left: 1rem; }
+.nav a:hover { color: var(--text); }
+
+.hero { position: relative; padding: clamp(3rem, 8vw, 6rem) 0; overflow: hidden; }
+.hero h1 { font-size: clamp(2rem, 6vw, 3.25rem); margin: 0 0 .5rem; }
+.hero .sub { color: var(--muted); max-width: 46ch; }
+
+.bg-grid {
+  position: absolute; inset: 0; background:
+    linear-gradient(to right, rgba(255,255,255,.05) 1px, transparent 1px) 0 0 / 40px 40px,
+    linear-gradient(to bottom, rgba(255,255,255,.05) 1px, transparent 1px) 0 0 / 40px 40px;
+  mask-image: radial-gradient(ellipse at 20% 0%, rgba(0,0,0,.7), transparent 70%);
+}
+
+.section { padding: 3rem 0; border-top: 1px solid var(--border); background: var(--bg); }
+.section.alt { background: var(--bg-alt); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display:flex; flex-direction:column; }
+.card-media { aspect-ratio: 16/9; }
+.card-body { padding: 1rem; }
+
+.btn { display:inline-block; padding:.7rem 1rem; border:1px solid var(--border); border-radius:10px; text-decoration:none; color:var(--text); }
+.btn.primary { background: var(--brand); color:#111; border-color:transparent; font-weight:600; }
+.btn + .btn { margin-left:.6rem; }
+.cta-row { margin-top:1rem; }
+
+.artist-grid { list-style:none; padding:0; margin:0; display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: .75rem; }
+.artist-grid a { display:block; padding: .9rem 1rem; border:1px solid var(--border); border-radius: 10px; background: var(--card); color:var(--text); text-decoration:none; }
+.artist-grid a:hover { border-color: var(--brand); }
+
+.lore-block { margin:.5rem 0; background: var(--card); border:1px solid var(--border); border-radius: 10px; padding:.5rem .75rem; }
+
+.socials a { margin-right: .9rem; color: var(--muted); text-decoration:none; }
+.socials a:hover { color: var(--text); }
+
+.contact-form { margin-top:1rem; }
+.contact-form .row { display:grid; grid-template-columns:1fr 1fr; gap: .75rem; }
+.contact-form input, .contact-form textarea {
+  width: 100%; padding: .75rem .8rem; background: #0e1118; color: var(--text);
+  border: 1px solid var(--border); border-radius: 10px;
+}
+.contact-form button { margin-top: .75rem; }
+
+.site-footer { border-top: 1px solid var(--border); padding: 1.25rem 0; color: var(--muted); }
+
+.img-skeleton { background: linear-gradient(90deg, #131722 25%, #171b27 37%, #131722 63%); background-size: 400% 100%; animation: shimmer 1.6s infinite; }
+@keyframes shimmer { 0%{background-position: 100% 0} 100%{background-position: -100% 0} }
+
+.artist-hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; align-items: center; }
+.artist-art { aspect-ratio: 1 / 1; border-radius: 14px; border:1px solid var(--border); background: #11141a; }
+
+@media (max-width: 800px) {
+  .contact-form .row { grid-template-columns: 1fr; }
+  .artist-hero { grid-template-columns: 1fr; }
+}
+
+.artist-grid img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.artist-grid a:hover img {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+/* --- Hover & focus enhancements (added) --- */
+.artist-grid a {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.artist-grid a img {
+  transition: transform .25s ease, opacity .25s ease;
+  will-change: transform;
+}
+.artist-grid a:hover img,
+.artist-grid a:focus-visible img {
+  transform: scale(1.03);
+  opacity: 0.96;
+}
+.artist-grid a:hover,
+.artist-grid a:focus-visible {
+  border-color: var(--brand);
+  box-shadow: 0 6px 22px rgba(155, 135, 245, 0.18);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+/* Card hover */
+.card {
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover,
+.card:focus-within {
+  transform: translateY(-3px);
+  border-color: var(--brand);
+  box-shadow: 0 10px 30px rgba(155,135,245,0.12);
+}
+
+/* Buttons: slight pop */
+.btn {
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  outline: none;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .artist-grid a, .artist-grid a img, .card, .btn {
+    transition: none !important;
+  }
+}
