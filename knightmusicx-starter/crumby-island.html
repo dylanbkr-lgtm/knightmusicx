@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crumby Island — Knight Musix X</title>
+  <meta name="description" content="Welcome to Crumby Island. A greasy West Coast universe of dock dust, municipal breakdowns, outlaw wisdom, and Lil’ Cabbage chaos.">
+  <meta property="og:title" content="Crumby Island — Knight Musix X">
+  <meta property="og:description" content="Dock dust. Fry mysticism. West Coast outlaw comedy. Enter Crumby Island.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/images/og-image.png">
+  <meta name="theme-color" content="#0f0f10">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .hero-crumby {
+      position: relative;
+      overflow: hidden;
+      padding: 6rem 0 4rem;
+    }
+
+    .hero-crumby::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,180,80,0.12), transparent 30%),
+        radial-gradient(circle at 80% 10%, rgba(120,180,255,0.10), transparent 25%),
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.08));
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 1rem;
+    }
+
+    .feature-grid,
+    .character-grid,
+    .social-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .feature-card,
+    .character-card,
+    .social-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 1.25rem;
+    }
+
+    .section-copy {
+      max-width: 760px;
+      margin-bottom: 1.5rem;
+    }
+
+    .quote-block {
+      border-left: 4px solid rgba(255,255,255,0.18);
+      padding-left: 1rem;
+      margin: 1.5rem 0 0;
+      opacity: 0.9;
+    }
+
+    .social-card a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Knight Music X</a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/#artists">Artists</a>
+      <a href="/lore/">Lore</a>
+      <a href="#socials">Socials</a>
+      <a href="#contact-links">Links</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero hero-crumby">
+    <div class="wrap">
+      <span class="eyebrow">Knight Musix X Universe</span>
+      <h1>Crumby Island</h1>
+      <p class="sub">
+        A fog-soaked West Coast world of dock dust, cursed fry seasoning, outlaw microwave prophecy,
+        civic overreach, raccoon deals, and Lil’ Cabbage stumbling toward truth in a stained hoodie.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Watch on YouTube</a>
+        <a class="btn" href="https://www.tiktok.com/@lilcabbagex?lang=en" target="_blank" rel="noreferrer">TikTok</a>
+        <a class="btn" href="https://www.instagram.com/lil_cabbage982/?hl=en" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+      <div class="quote-block">
+        <p>“Municipal greasy gothic with a ferry hangover.”</p>
+      </div>
+    </div>
+    <div class="bg-grid" aria-hidden="true"></div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>What Is Crumby Island?</h2>
+      <p class="section-copy">
+        Crumby Island is part comedy universe, part music project, part local myth machine. It lives in the overlap
+        between public-access chaos, mockumentary realism, country-trap energy, and weird coastal folklore. Think
+        rain, docks, ferry static, bad decisions, sacred leftovers, and a town one minor bylaw away from spiritual collapse.
+      </p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Music</h3>
+          <p>Lil’ Cabbage brings West Coast country-trap with mud on the boots and grease on the soul.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Stories</h3>
+          <p>Crumby Island lore runs on local weirdness, cursed civic systems, and low-budget revelations.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Videos</h3>
+          <p>Short-form bits, mock-news fragments, VHS-core town panic, and badly supervised prophecy.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Worldbuilding</h3>
+          <p>Dock Dust, CAPA, coil fragments, snack-currency wars, and microwaves nobody should trust.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>Main Characters</h2>
+      <div class="character-grid">
+        <article class="character-card">
+          <h3>Lil’ Cabbage</h3>
+          <p>Late-30s island outlaw with fry-addled prophet energy, a filthy plaid jacket, a floppy cowboy hat, and no reliable plan.</p>
+        </article>
+        <article class="character-card">
+          <h3>Shithawk</h3>
+          <p>A dog-sized seagull with glitchy PA-static wisdom. Could be divine. Could be corporate. Bad either way.</p>
+        </article>
+        <article class="character-card">
+          <h3>Barb Melvin</h3>
+          <p>Civic hardass. Municipal fleece zipped to the throat. Runs local authority like a haunted HOA with a clipboard.</p>
+        </article>
+        <article class="character-card">
+          <h3>Trash Panda</h3>
+          <p>Sharp-faced raccoon hustler in a shabby trench coat, forever one bad deal away from a breakthrough.</p>
+        </article>
+        <article class="character-card">
+          <h3>Crow</h3>
+          <p>Greasy leather-jacket systems freak pushing DustCoin and microcurrencies like salvation is one wallet app away.</p>
+        </article>
+        <article class="character-card">
+          <h3>The Oil-Saint</h3>
+          <p>An elder raccoon mystic with fryer soot markings and telepathic grease-riddles nobody asked for.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>The Lore</h2>
+      <p class="section-copy">
+        Crumby Island runs on recurring symbols and holy nonsense. Dock Dust is cursed fry seasoning tied to visions,
+        municipal collapse, and snack-based crime. The Microwave is a sacred coastal relic. Coil fragments are scattered
+        pieces of something awful or holy. CAPA arrives late, underprepared, and somehow overfunded.
+      </p>
+      <details class="lore-block">
+        <summary>Dock Dust</summary>
+        <p>A cursed seasoning with spiritual side effects and suspicious economic influence.</p>
+      </details>
+      <details class="lore-block">
+        <summary>The Microwave</summary>
+        <p>A relic that pulses with greasy light and may be a time-locked deity, appliance, or both.</p>
+      </details>
+      <details class="lore-block">
+        <summary>CAPA</summary>
+        <p>The Crumberlland Animal Protection Agency. Ineffective, traumatized, and always somehow issuing fines.</p>
+      </details>
+      <details class="lore-block">
+        <summary>Shithawk Prophecies</summary>
+        <p>Ignored civic omens delivered through static, menace, and bird-related timing.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>Music + Video</h2>
+      <p class="section-copy">
+        Crumby Island is not just a page. It is a whole greasy ecosystem. Songs, lore, visuals, and character bits all feed the same world.
+        Lil’ Cabbage is the loudest signal, but the larger project keeps mutating through stories, scenes, and local mythology.
+      </p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Listen</h3>
+          <p>Country-trap, outlaw humor, heartbreak in the rain, ferry static, and dockside survival anthems.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Watch</h3>
+          <p>Short-form videos, character scenes, Crumby news energy, and low-budget local chaos turned sacred.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Follow the World</h3>
+          <p>Every song, clip, and scene adds another layer to the town, the characters, and the snack-crime cosmology.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="socials" class="section">
+    <div class="wrap">
+      <h2>Follow Crumby Island</h2>
+      <div class="social-grid">
+        <article class="social-card">
+          <h3>YouTube</h3>
+          <p>Music videos, scenes, lore fragments, and public-access-grade town panic.</p>
+          <a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Visit YouTube →</a>
+        </article>
+        <article class="social-card">
+          <h3>TikTok</h3>
+          <p>Short-form Crumby energy, hooks, bits, and weird local prophecy in vertical form.</p>
+          <a href="https://www.tiktok.com/@lilcabbagex?lang=en" target="_blank" rel="noreferrer">Visit TikTok →</a>
+        </article>
+        <article class="social-card">
+          <h3>Instagram</h3>
+          <p>Character visuals, project updates, and whatever survived the ferry ride.</p>
+          <a href="https://www.instagram.com/lil_cabbage982/?hl=en" target="_blank" rel="noreferrer">Visit Instagram →</a>
+        </article>
+        <article class="social-card">
+          <h3>Facebook</h3>
+          <p>For the civilized degenerates who still want updates in a cursed town square.</p>
+          <a href="https://www.facebook.com/Cabbagepatchtrap" target="_blank" rel="noreferrer">Visit Facebook →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-links" class="section alt">
+    <div class="wrap">
+      <h2>Quick Links</h2>
+      <div class="cta-row">
+        <a class="btn primary" href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">YouTube</a>
+        <a class="btn" href="https://www.tiktok.com/@lilcabbagex?lang=en" target="_blank" rel="noreferrer">TikTok</a>
+        <a class="btn" href="https://www.instagram.com/lil_cabbage982/?hl=en" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="btn" href="https://www.facebook.com/Cabbagepatchtrap" target="_blank" rel="noreferrer">Facebook</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© <span id="year"></span> Knight Music X. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
