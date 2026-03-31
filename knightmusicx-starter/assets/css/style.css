@@ -146,3 +146,134 @@ body {
     transition: none !important;
   }
 }
+/* Crumby Island page */
+.hero-crumby {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4rem, 9vw, 7rem) 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 169, 77, 0.10), transparent 28%),
+    radial-gradient(circle at 80% 10%, rgba(120, 180, 255, 0.10), transparent 24%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.18));
+}
+
+.hero-crumby::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.02) 0,
+      rgba(255,255,255,0.02) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--focus);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-copy {
+  max-width: 760px;
+  color: var(--muted);
+}
+
+.feature-grid,
+.character-grid,
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.feature-card,
+.character-card,
+.social-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.feature-card:hover,
+.character-card:hover,
+.social-card:hover {
+  transform: translateY(-3px);
+  border-color: #7f6ce0;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+}
+
+.feature-card h3,
+.character-card h3,
+.social-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+}
+
+.feature-card p,
+.character-card p,
+.social-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.quote-block {
+  margin-top: 1.5rem;
+  max-width: 700px;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid var(--brand);
+  background: rgba(255,255,255,0.025);
+  border-radius: 0 12px 12px 0;
+}
+
+.quote-block p {
+  margin: 0;
+  color: var(--text);
+  font-style: italic;
+}
+
+.social-card a {
+  display: inline-block;
+  margin-top: 0.9rem;
+  color: var(--focus);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.social-card a:hover,
+.social-card a:focus-visible {
+  color: var(--text);
+}
+
+.hero-crumby .btn.primary {
+  background: #f0b35e;
+  color: #151515;
+}
+
+.hero-crumby .btn.primary:hover,
+.hero-crumby .btn.primary:focus-visible {
+  box-shadow: 0 10px 24px rgba(240,179,94,0.22);
+}
+
+.hero-crumby .btn {
+  backdrop-filter: blur(6px);
+}
+
+@media (max-width: 800px) {
+  .feature-grid,
+  .character-grid,
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+}
