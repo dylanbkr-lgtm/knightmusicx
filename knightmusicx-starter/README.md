@@ -1,4 +1,4 @@
-# Knight Musix X — Static Site Starter
+# Knight Music X — Static Site Starter
 
 This is a lightweight, zero-build static site ready for **Netlify**. No frameworks required.
 
