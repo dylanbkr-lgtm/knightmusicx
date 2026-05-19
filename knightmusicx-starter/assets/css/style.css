@@ -506,6 +506,12 @@ body {
   align-items: center;
 }
 
+.radio-player-grid-secondary {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
 .radio-player-grid h2 {
   margin: 0 0 .75rem;
   max-width: 10ch;
