@@ -478,7 +478,7 @@ body {
     #0d0f12;
 }
 
-.chronicle-board {
+.chronicle-overview {
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(280px, 1.1fr);
   gap: 1rem;
@@ -486,7 +486,7 @@ body {
 }
 
 .chronicle-case,
-.beat-list div {
+.episode-card {
   border: 1px solid var(--border);
   border-radius: 8px;
   background:
@@ -514,7 +514,7 @@ body {
 }
 
 .chronicle-case p,
-.beat-list p {
+.episode-card p {
   color: var(--muted);
 }
 
@@ -534,16 +534,17 @@ body {
   background: rgba(255,255,255,.04);
 }
 
-.beat-list {
+.episode-grid {
   display: grid;
   gap: .75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.beat-list div {
+.episode-card {
   padding: 1rem;
 }
 
-.beat-list span {
+.episode-card span {
   display: block;
   margin-bottom: .35rem;
   color: #f0b35e;
@@ -553,7 +554,11 @@ body {
   font-size: .76rem;
 }
 
-.beat-list p {
+.episode-card h3 {
+  margin: 0 0 .45rem;
+}
+
+.episode-card p {
   margin: 0;
 }
 
@@ -780,7 +785,7 @@ body {
 
 @media (max-width: 800px) {
   .crumby-hero-grid,
-  .chronicle-board,
+  .chronicle-overview,
   .crumby-broadcast {
     grid-template-columns: 1fr;
   }
@@ -816,5 +821,8 @@ body {
   .crumby-poster {
     max-width: 320px;
     margin-inline: auto;
+  }
+  .episode-grid {
+    grid-template-columns: 1fr;
   }
 }
