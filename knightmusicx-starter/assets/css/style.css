@@ -150,6 +150,28 @@ body {
 .artist-grid { list-style:none; padding:0; margin:0; display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: .75rem; }
 .artist-grid a { display:block; padding: .9rem 1rem; border:1px solid var(--border); border-radius: 8px; background: var(--card); color:var(--text); text-decoration:none; }
 .artist-grid a:hover { border-color: var(--brand); }
+.artist-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: .75rem;
+}
+.artist-name,
+.artist-tag {
+  display: block;
+}
+.artist-name {
+  font-weight: 700;
+  line-height: 1.2;
+}
+.artist-tag {
+  margin-top: .3rem;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.35;
+}
 
 .lore-block { margin:.5rem 0; background: var(--card); border:1px solid var(--border); border-radius: 8px; padding:.5rem .75rem; }
 
