@@ -421,6 +421,57 @@ body {
   pointer-events: none;
 }
 
+.crumby-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 480px);
+  gap: clamp(2rem, 6vw, 4rem);
+  align-items: center;
+}
+
+.crumby-hero-copy h1 {
+  max-width: 8ch;
+}
+
+.crumby-poster img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 24px 70px rgba(0,0,0,.32);
+}
+
+.crumby-status {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .6rem;
+  margin-top: 1.5rem;
+}
+
+.crumby-status div {
+  min-width: 0;
+  padding: .85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(17,20,26,.78);
+}
+
+.crumby-status span,
+.crumby-status strong {
+  display: block;
+}
+
+.crumby-status span {
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+.crumby-status strong {
+  margin-top: .2rem;
+  line-height: 1.15;
+}
+
 .eyebrow {
   display: inline-block;
   margin-bottom: 1rem;
@@ -452,6 +503,130 @@ body {
   border-radius: 8px;
   padding: 1.1rem;
   transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.feature-card-media {
+  overflow: hidden;
+  padding: 0;
+}
+
+.feature-card-media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+
+.feature-card-media h3,
+.feature-card-media p,
+.feature-card-media a {
+  margin-left: 1.1rem;
+  margin-right: 1.1rem;
+}
+
+.feature-card-media h3 {
+  margin-top: 1rem;
+}
+
+.feature-card-media a {
+  display: inline-block;
+  margin-top: .2rem;
+  margin-bottom: 1.1rem;
+  color: var(--focus);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.character-role {
+  display: inline-block;
+  margin-bottom: .7rem;
+  color: var(--focus);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.crumby-field-guide {
+  background:
+    linear-gradient(180deg, rgba(193,243,125,.05), transparent 38%),
+    var(--bg);
+}
+
+.lore-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.lore-card {
+  min-height: 220px;
+  padding: 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(155,135,245,.10), rgba(193,243,125,.04)),
+    var(--card);
+}
+
+.lore-card span {
+  color: var(--focus);
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.lore-card h3 {
+  margin: 2.4rem 0 .55rem;
+}
+
+.lore-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.crumby-broadcast {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.crumby-broadcast h2 {
+  margin-top: 0;
+}
+
+.crumby-broadcast p {
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.broadcast-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .7rem;
+  padding: 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+}
+
+.broadcast-card span,
+.broadcast-card strong {
+  display: block;
+}
+
+.broadcast-card span {
+  color: var(--muted);
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.broadcast-card strong {
+  font-size: 1.6rem;
+  line-height: 1.05;
 }
 
 .feature-card:hover,
@@ -519,9 +694,41 @@ body {
 }
 
 @media (max-width: 800px) {
+  .crumby-hero-grid,
+  .crumby-broadcast {
+    grid-template-columns: 1fr;
+  }
+  .crumby-status {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .feature-grid,
   .character-grid,
   .social-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-crumby {
+    padding: 2.5rem 0;
+  }
+  .crumby-hero-copy h1 {
+    font-size: 3rem;
+  }
+  .crumby-status {
+    gap: .45rem;
+  }
+  .crumby-status div {
+    padding: .58rem;
+  }
+  .crumby-status span {
+    font-size: .68rem;
+  }
+  .crumby-status strong {
+    font-size: .82rem;
+  }
+  .crumby-poster {
+    max-width: 320px;
+    margin-inline: auto;
   }
 }

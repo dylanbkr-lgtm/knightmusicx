@@ -13,68 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=mobile-1">
-  <style>
-    .hero-crumby {
-      position: relative;
-      overflow: hidden;
-      padding: 6rem 0 4rem;
-    }
-
-    .hero-crumby::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(255,180,80,0.12), transparent 30%),
-        radial-gradient(circle at 80% 10%, rgba(120,180,255,0.10), transparent 25%),
-        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.08));
-      pointer-events: none;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      opacity: 0.8;
-      margin-bottom: 1rem;
-    }
-
-    .feature-grid,
-    .character-grid,
-    .social-grid {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .feature-card,
-    .character-card,
-    .social-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 1.25rem;
-    }
-
-    .section-copy {
-      max-width: 760px;
-      margin-bottom: 1.5rem;
-    }
-
-    .quote-block {
-      border-left: 4px solid rgba(255,255,255,0.18);
-      padding-left: 1rem;
-      margin: 1.5rem 0 0;
-      opacity: 0.9;
-    }
-
-    .social-card a {
-      font-weight: 600;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/style.css?v=crumby-1">
 </head>
 <body>
 <header class="site-header">
@@ -91,23 +30,30 @@
 
 <main>
   <section class="hero hero-crumby">
-    <div class="wrap">
-      <span class="eyebrow">Knight Music X Universe</span>
-      <h1>Crumby Island</h1>
-      <p class="sub">
-        A fog-soaked West Coast world of dock dust, civic folklore, outlaw prophecy,
-        civic overreach, raccoon deals, and Lil’ Cabbage stumbling toward truth in a stained hoodie.
-      </p>
-      <div class="cta-row">
-        <a class="btn primary" href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Watch on YouTube</a>
-        <a class="btn" href="https://www.tiktok.com/@lilcabbagex?lang=en" target="_blank" rel="noreferrer">TikTok</a>
-        <a class="btn" href="https://www.instagram.com/lil_cabbage982/?hl=en" target="_blank" rel="noreferrer">Instagram</a>
+    <div class="wrap crumby-hero-grid">
+      <div class="crumby-hero-copy">
+        <span class="eyebrow">Crumby Island Broadcast</span>
+        <h1>Crumby Island</h1>
+        <p class="sub">
+          A fog-soaked West Coast comedy project where Lil’ Cabbage, civic folklore,
+          ferry static, and local prophecy all keep crashing into the same shoreline.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Watch on YouTube</a>
+          <a class="btn" href="https://www.tiktok.com/@lilcabbagex?lang=en" target="_blank" rel="noreferrer">TikTok</a>
+          <a class="btn" href="/artists/lil-cabbage.html">Lil’ Cabbage</a>
+        </div>
+        <div class="crumby-status" aria-label="Crumby Island status board">
+          <div><span>Signal</span><strong>Ferry Static</strong></div>
+          <div><span>Primary Artist</span><strong>Lil’ Cabbage</strong></div>
+          <div><span>Local Risk</span><strong>Moderate Prophecy</strong></div>
+        </div>
       </div>
-      <div style="margin-top:2rem; max-width:820px;">
-  <img src="/images/crumby/crumbyislandttl.png" alt="Crumby Island" style="width:100%; display:block; border-radius:16px; border:1px solid var(--border);">
-</div>
-      <div class="quote-block">
-        <p>“Municipal greasy gothic with a ferry hangover.”</p>
+      <div class="crumby-poster">
+        <img src="/images/crumby/crumbyislandttl.png" alt="Crumby Island title art">
+        <div class="quote-block">
+          <p>“Municipal coastal gothic with a ferry hangover.”</p>
+        </div>
       </div>
     </div>
     <div class="bg-grid" aria-hidden="true"></div>
@@ -115,28 +61,29 @@
 
   <section class="section">
     <div class="wrap">
-      <h2>What Is Crumby Island?</h2>
-      <p class="section-copy">
-        Crumby Island is part comedy universe, part music project, part local myth machine. It lives in the overlap
-        between public-access comedy, mockumentary realism, country-trap energy, and weird coastal folklore. Think
-        rain, docks, ferry static, bad decisions, sacred leftovers, and a town one minor bylaw away from spiritual collapse.
-      </p>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <h3>Music</h3>
-          <p>Lil’ Cabbage brings West Coast country-trap with mud on the boots and heart in the signal.</p>
+      <div class="section-heading">
+        <span class="eyebrow">Start Here</span>
+        <h2>The Island In Three Moves</h2>
+        <p>Watch the clips, follow Lil’ Cabbage, then let the lore explain why the town feels like it knows something you do not.</p>
+      </div>
+      <div class="feature-grid crumby-entry-grid">
+        <article class="feature-card feature-card-media">
+          <img src="/images/lilcabbageartist.jpeg" alt="Lil’ Cabbage artist image">
+          <h3>Listen</h3>
+          <p>West Coast country-trap, outlaw humor, heartbreak in the rain, ferry static, and dockside survival anthems.</p>
+          <a href="/artists/lil-cabbage.html">Open Lil’ Cabbage</a>
         </article>
-        <article class="feature-card">
-          <h3>Stories</h3>
-          <p>Crumby Island lore runs on local weirdness, cursed civic systems, and low-budget revelations.</p>
+        <article class="feature-card feature-card-media">
+          <img src="/images/LILCABBAGE%20NANAIMO%20FACE.jpg" alt="Lil’ Cabbage Nanaimo artwork">
+          <h3>Watch</h3>
+          <p>Short-form videos, character scenes, Crumby news energy, and low-budget local mythology.</p>
+          <a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Visit YouTube</a>
         </article>
-        <article class="feature-card">
-          <h3>Videos</h3>
-          <p>Short-form bits, mock-news fragments, VHS-core town panic, and half-supervised prophecy.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Worldbuilding</h3>
+        <article class="feature-card feature-card-media">
+          <img src="/images/Lil%E2%80%99%20Cabbageislandmade.jpg" alt="Lil’ Cabbage Island Made artwork">
+          <h3>Decode</h3>
           <p>Dock Dust, CAPA, coil fragments, local economies, and civic myths nobody fully understands.</p>
+          <a href="#lore">Read the field guide</a>
         </article>
       </div>
     </div>
@@ -144,29 +91,39 @@
 
   <section class="section alt">
     <div class="wrap">
-      <h2>Main Characters</h2>
+      <div class="section-heading">
+        <span class="eyebrow">Cast</span>
+        <h2>Main Characters</h2>
+        <p>The island works best when the town feels real enough to avoid after dark.</p>
+      </div>
       <div class="character-grid">
         <article class="character-card">
+          <span class="character-role">Primary signal</span>
           <h3>Lil’ Cabbage</h3>
           <p>Late-30s island outlaw with prophet energy, a weathered plaid jacket, a floppy cowboy hat, and no reliable plan.</p>
         </article>
         <article class="character-card">
+          <span class="character-role">Bad omen</span>
           <h3>Shithawk</h3>
           <p>A dog-sized seagull with glitchy PA-static wisdom. Could be divine. Could be corporate. Bad either way.</p>
         </article>
         <article class="character-card">
+          <span class="character-role">Municipal pressure</span>
           <h3>Barb Melvin</h3>
           <p>Civic hardass. Municipal fleece zipped to the throat. Runs local authority like a haunted HOA with a clipboard.</p>
         </article>
         <article class="character-card">
+          <span class="character-role">Side hustle operator</span>
           <h3>Trash Panda</h3>
           <p>Sharp-faced raccoon hustler in a shabby trench coat, forever one bad deal away from a breakthrough.</p>
         </article>
         <article class="character-card">
+          <span class="character-role">Currency evangelist</span>
           <h3>Crow</h3>
           <p>Leather-jacket systems obsessive pushing DustCoin and microcurrencies like salvation is one wallet app away.</p>
         </article>
         <article class="character-card">
+          <span class="character-role">Local myth</span>
           <h3>The Oil-Saint</h3>
           <p>An elder raccoon mystic with fryer soot markings and telepathic grease-riddles nobody asked for.</p>
         </article>
@@ -174,53 +131,54 @@
     </div>
   </section>
 
-  <section class="section">
+  <section id="lore" class="section crumby-field-guide">
     <div class="wrap">
-      <h2>The Lore</h2>
-      <p class="section-copy">
-        Crumby Island runs on recurring symbols and holy nonsense. Dock Dust is cursed fry seasoning tied to visions,
-        municipal collapse, and snack-based crime. The Microwave is a sacred coastal relic. Coil fragments are scattered
-        pieces of something awful or holy. CAPA arrives late, underprepared, and somehow overfunded.
-      </p>
-      <details class="lore-block">
-        <summary>Dock Dust</summary>
-        <p>A cursed seasoning with spiritual side effects and suspicious economic influence.</p>
-      </details>
-      <details class="lore-block">
-        <summary>The Microwave</summary>
-        <p>A relic that pulses with strange light and may be a time-locked deity, appliance, or both.</p>
-      </details>
-      <details class="lore-block">
-        <summary>CAPA</summary>
-        <p>The Crumberlland Animal Protection Agency. Ineffective, traumatized, and always somehow issuing fines.</p>
-      </details>
-      <details class="lore-block">
-        <summary>Shithawk Prophecies</summary>
-        <p>Ignored civic omens delivered through static, menace, and bird-related timing.</p>
-      </details>
+      <div class="section-heading">
+        <span class="eyebrow">Field Guide</span>
+        <h2>The Lore</h2>
+        <p>Crumby Island runs on recurring symbols, civic pressure, snack economics, and warnings nobody takes seriously until the lights flicker.</p>
+      </div>
+      <div class="lore-card-grid">
+        <article class="lore-card">
+          <span>01</span>
+          <h3>Dock Dust</h3>
+          <p>A cursed seasoning with spiritual side effects and suspicious economic influence.</p>
+        </article>
+        <article class="lore-card">
+          <span>02</span>
+          <h3>The Microwave</h3>
+          <p>A relic that pulses with strange light and may be a time-locked deity, appliance, or both.</p>
+        </article>
+        <article class="lore-card">
+          <span>03</span>
+          <h3>CAPA</h3>
+          <p>The Crumberlland Animal Protection Agency. Ineffective, traumatized, and always somehow issuing fines.</p>
+        </article>
+        <article class="lore-card">
+          <span>04</span>
+          <h3>Signal Weather</h3>
+          <p>Ignored civic omens delivered through static, menace, ferry timing, and bad reception.</p>
+        </article>
+      </div>
     </div>
   </section>
 
   <section class="section alt">
     <div class="wrap">
-      <h2>Music + Video</h2>
-      <p class="section-copy">
-        Crumby Island is not just a page. It is a whole greasy ecosystem. Songs, lore, visuals, and character bits all feed the same world.
-        Lil’ Cabbage is the loudest signal, but the larger project keeps mutating through stories, scenes, and local mythology.
-      </p>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <h3>Listen</h3>
-          <p>Country-trap, outlaw humor, heartbreak in the rain, ferry static, and dockside survival anthems.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Watch</h3>
-          <p>Short-form videos, character scenes, Crumby news energy, and low-budget local mythology.</p>
-        </article>
-        <article class="feature-card">
-          <h3>Follow the World</h3>
-          <p>Every song, clip, and scene adds another layer to the town, the characters, and the snack-crime cosmology.</p>
-        </article>
+      <div class="crumby-broadcast">
+        <div>
+          <span class="eyebrow">Current Signal</span>
+          <h2>Music + Video</h2>
+          <p>
+            Crumby Island is not just a page. Songs, visuals, and character bits all feed the same project.
+            Lil’ Cabbage is the loudest signal, but the island keeps mutating through scenes, clips, and local mythology.
+          </p>
+        </div>
+        <div class="broadcast-card">
+          <span>Now transmitting</span>
+          <strong>Lil’ Cabbage X</strong>
+          <a class="btn primary" href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Watch the channel</a>
+        </div>
       </div>
     </div>
   </section>
