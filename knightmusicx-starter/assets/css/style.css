@@ -472,6 +472,91 @@ body {
   line-height: 1.15;
 }
 
+.crumby-chronicles {
+  background:
+    linear-gradient(180deg, rgba(240,179,94,.08), rgba(255,255,255,0) 42%),
+    #0d0f12;
+}
+
+.chronicle-board {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(280px, 1.1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.chronicle-case,
+.beat-list div {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background:
+    linear-gradient(160deg, rgba(240,179,94,.10), rgba(155,135,245,.05)),
+    var(--card);
+}
+
+.chronicle-case {
+  padding: 1.2rem;
+}
+
+.case-label {
+  display: inline-block;
+  color: var(--focus);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.chronicle-case h3 {
+  margin: 1.4rem 0 .7rem;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: .95;
+}
+
+.chronicle-case p,
+.beat-list p {
+  color: var(--muted);
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: 1rem;
+}
+
+.case-tags span {
+  padding: .35rem .55rem;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: .78rem;
+  background: rgba(255,255,255,.04);
+}
+
+.beat-list {
+  display: grid;
+  gap: .75rem;
+}
+
+.beat-list div {
+  padding: 1rem;
+}
+
+.beat-list span {
+  display: block;
+  margin-bottom: .35rem;
+  color: #f0b35e;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .76rem;
+}
+
+.beat-list p {
+  margin: 0;
+}
+
 .eyebrow {
   display: inline-block;
   margin-bottom: 1rem;
@@ -695,6 +780,7 @@ body {
 
 @media (max-width: 800px) {
   .crumby-hero-grid,
+  .chronicle-board,
   .crumby-broadcast {
     grid-template-columns: 1fr;
   }
