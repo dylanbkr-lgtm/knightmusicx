@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Knight Music X Radio</title>
-  <meta name="description" content="Knight Music X Radio: a fake late-night broadcast console for artist signals, Crumby Island transmissions, and coastal static.">
+  <meta name="description" content="Knight Music X Radio: a Spotify playlist-powered station for Knight Music X artist signals, Crumby Island transmissions, and coastal static.">
   <meta property="og:title" content="Knight Music X Radio">
   <meta property="og:description" content="Tune into the Knight Music X broadcast desk.">
   <meta property="og:type" content="website">
@@ -32,16 +32,17 @@
       <div class="radio-copy">
         <span class="eyebrow">KMXX 88.6 FM</span>
         <h1>Knight Music X Radio</h1>
-        <p class="sub">A midnight broadcast console for artist signals, island folklore, music videos, and whatever keeps leaking through the static.</p>
+        <p class="sub">A playlist-powered station for artist signals, island folklore, music videos, and whatever keeps leaking through the static.</p>
         <div class="cta-row">
-          <a class="btn primary" href="#channels">Tune Channels</a>
+          <a class="btn primary" href="#station-player">Listen Live</a>
+          <a class="btn" href="#channels">Tune Channels</a>
           <a class="btn" href="#broadcast-log">Broadcast Log</a>
         </div>
       </div>
       <div class="radio-console" aria-label="Knight Music X radio console">
         <div class="radio-screen">
           <span>Now Tuning</span>
-          <strong>KMXX MAIN SIGNAL</strong>
+          <strong>SPOTIFY PLAYLIST LIVE</strong>
           <p>Independent AI music projects, coastal static, and public-access energy.</p>
         </div>
         <div class="radio-dial" aria-hidden="true">
@@ -58,12 +59,31 @@
     </div>
   </section>
 
+  <section id="station-player" class="section alt">
+    <div class="wrap radio-player-grid">
+      <div>
+        <span class="eyebrow">Live Station</span>
+        <h2>KMXX Playlist Broadcast</h2>
+        <p class="section-copy">This is the working Knight Music X radio station: the playlist runs through Spotify, so listeners can press play right here and keep the station open.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://open.spotify.com/playlist/1s2yftd5s9SSUdN7nx7a3h" target="_blank" rel="noreferrer">Open in Spotify</a>
+        </div>
+      </div>
+      <article class="spotify-player-card">
+        <iframe src="https://open.spotify.com/embed/playlist/1s2yftd5s9SSUdN7nx7a3h?utm_source=generator"
+          width="100%" height="380" frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+      </article>
+    </div>
+  </section>
+
   <section id="channels" class="section radio-section">
     <div class="wrap">
       <div class="section-heading">
         <span class="eyebrow">Channels</span>
         <h2>Station Dial</h2>
-        <p>Each channel is a doorway into a different Knight Music X signal. Simple now, expandable later.</p>
+        <p>The main station is live through Spotify. These channels shape the world around it and point listeners deeper into the roster.</p>
       </div>
       <div class="radio-channel-grid">
         <article class="radio-channel radio-channel-live">
@@ -103,30 +123,6 @@
           <a href="/artists/hushnoise.html">Tune Hushnoise</a>
         </article>
       </div>
-    </div>
-  </section>
-
-  <section class="section alt">
-    <div class="wrap radio-player-grid">
-      <div>
-        <span class="eyebrow">Now Playing</span>
-        <h2>Lil’ Cabbage Video Signal</h2>
-        <p class="section-copy">The first broadcast slot pulls from the Lil’ Cabbage music video feed. This can rotate as new drops arrive.</p>
-      </div>
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe src="https://www.youtube.com/embed/fBrkmgAuku4"
-            title="Lil’ Cabbage - Ferry Blues" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen loading="lazy"></iframe>
-        </div>
-        <div class="video-card-body">
-          <span>Current Rotation</span>
-          <h3>Ferry Blues</h3>
-          <p>A coastal sad-song drift through ferry static, wet pavement, and island-made heartbreak.</p>
-          <a href="https://youtu.be/fBrkmgAuku4" target="_blank" rel="noreferrer">Watch on YouTube</a>
-        </div>
-      </article>
     </div>
   </section>
 

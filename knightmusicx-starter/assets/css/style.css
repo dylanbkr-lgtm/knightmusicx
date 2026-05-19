@@ -513,6 +513,23 @@ body {
   line-height: 1;
 }
 
+.spotify-player-card {
+  overflow: hidden;
+  padding: .7rem;
+  border: 1px solid rgba(193,243,125,.22);
+  border-radius: 8px;
+  background:
+    linear-gradient(150deg, rgba(193,243,125,.08), rgba(155,135,245,.045)),
+    var(--card);
+  box-shadow: 0 18px 50px rgba(0,0,0,.24);
+}
+
+.spotify-player-card iframe {
+  display: block;
+  min-height: 380px;
+  border-radius: 8px;
+}
+
 .broadcast-log {
   display: grid;
   gap: .75rem;
