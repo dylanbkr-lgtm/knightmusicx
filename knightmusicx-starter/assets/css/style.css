@@ -147,6 +147,17 @@ body {
 .btn + .btn { margin-left:0; }
 .cta-row { display:flex; flex-wrap: wrap; gap: .6rem; margin-top:1rem; }
 
+.roster-groups {
+  display: grid;
+  gap: 1.4rem;
+}
+.roster-group h3 {
+  margin: 0 0 .65rem;
+  color: var(--focus);
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
 .artist-grid { list-style:none; padding:0; margin:0; display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: .75rem; }
 .artist-grid a { display:block; padding: .9rem 1rem; border:1px solid var(--border); border-radius: 8px; background: var(--card); color:var(--text); text-decoration:none; }
 .artist-grid a:hover { border-color: var(--brand); }
