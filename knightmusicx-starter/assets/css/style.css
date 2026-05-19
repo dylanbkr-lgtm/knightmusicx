@@ -562,6 +562,77 @@ body {
   margin: 0;
 }
 
+.video-section {
+  margin-top: 2rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, .8fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.video-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  overflow: hidden;
+}
+
+.video-card-featured {
+  grid-row: span 3;
+}
+
+.video-frame {
+  aspect-ratio: 16 / 9;
+  background: #08090c;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.video-card-body,
+.video-card-placeholder {
+  padding: 1rem;
+}
+
+.video-card span {
+  display: block;
+  margin-bottom: .35rem;
+  color: #f0b35e;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.video-card h3 {
+  margin: 0 0 .45rem;
+}
+
+.video-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.video-card a {
+  display: inline-block;
+  margin-top: .85rem;
+  color: var(--focus);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.video-card-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .eyebrow {
   display: inline-block;
   margin-bottom: 1rem;
@@ -786,8 +857,12 @@ body {
 @media (max-width: 800px) {
   .crumby-hero-grid,
   .chronicle-overview,
+  .video-grid,
   .crumby-broadcast {
     grid-template-columns: 1fr;
+  }
+  .video-card-featured {
+    grid-row: auto;
   }
   .crumby-status {
     grid-template-columns: repeat(3, minmax(0, 1fr));
