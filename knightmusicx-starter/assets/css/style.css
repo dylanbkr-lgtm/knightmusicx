@@ -129,6 +129,12 @@ body {
   object-fit: cover;
 }
 .release-card .card-media { aspect-ratio: 1 / 1; min-height: 0; }
+.release-card .card-media iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 352px;
+  display: block;
+}
 .card-body { display: flex; flex: 1; flex-direction: column; padding: 1rem; }
 .card-body h3 { margin-top: 0; }
 .card-body p { color: var(--muted); }
@@ -213,6 +219,29 @@ body {
 
 .artist-hero { display: grid; grid-template-columns: 1.4fr minmax(220px, 420px); gap: 1.5rem; align-items: center; }
 .artist-art { aspect-ratio: 1 / 1; border-radius: 8px; border:1px solid var(--border); background: #11141a; overflow: hidden; }
+.text-art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: 1.5rem;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(155,135,245,.14), rgba(193,243,125,.06)),
+    #0e1118;
+}
+.text-art span {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1;
+}
+.text-art small {
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
 .listen-panel,
 .coming-soon {
   min-height: 220px;
