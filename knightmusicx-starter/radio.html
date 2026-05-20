@@ -34,9 +34,9 @@
         <h1>Knight Music X Radio</h1>
         <p class="sub">A playlist-powered station for artist signals, island folklore, music videos, and whatever keeps leaking through the static.</p>
         <div class="cta-row">
-          <a class="btn primary" href="#station-player">Listen Live</a>
+          <a class="btn primary" href="#shows">Watch the Show</a>
+          <a class="btn" href="#station-player">Listen Live</a>
           <a class="btn" href="#channels">Tune Channels</a>
-          <a class="btn" href="#broadcast-log">Broadcast Log</a>
         </div>
       </div>
       <div class="radio-console" aria-label="Knight Music X radio console">
@@ -59,19 +59,44 @@
     </div>
   </section>
 
-  <section id="station-player" class="section alt">
-    <div class="wrap radio-player-grid">
+  <section id="shows" class="section alt">
+    <div class="wrap radio-show-grid">
       <div>
         <span class="eyebrow">YouTube Show</span>
         <h2>Coastal Static Radio Show</h2>
-        <p class="section-copy">Coastal Static Radio Show is currently on YouTube. The Spotify player below is the companion playlist for now.</p>
+        <p class="section-copy">The show currently lives on YouTube. Spotify may become an option later; for now the playlist below is a companion signal.</p>
         <div class="cta-row">
           <a class="btn primary" href="https://youtu.be/I1XWzcTU-bc" target="_blank" rel="noreferrer">Watch the show</a>
-          <a class="btn" href="https://open.spotify.com/playlist/1s2yftd5s9SSUdN7nx7a3h" target="_blank" rel="noreferrer">Open companion playlist</a>
+          <a class="btn" href="#station-player">Open signals</a>
+        </div>
+      </div>
+      <article class="radio-show-card">
+        <img class="radio-show-art" src="/images/coastal%20static%20image.png" alt="Coastal Static Radio Show artwork">
+        <div>
+          <span>Episode 1</span>
+          <h3>Coastal Static Radio Show</h3>
+          <p>Status: currently on YouTube.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="station-player" class="section">
+    <div class="wrap section-heading">
+      <span class="eyebrow">Signals</span>
+      <h2>Playlist Signals</h2>
+      <p>Spotify playlists connected to the KMX station world. These are companion feeds, not the Coastal Static show upload.</p>
+    </div>
+    <div class="wrap radio-player-grid">
+      <div>
+        <span class="eyebrow">Companion Signal</span>
+        <h2>KMX Radio Broadcast</h2>
+        <p class="section-copy">The main KMX playlist feed for artist signals, coastal static, and broadcast-adjacent music.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://open.spotify.com/playlist/1s2yftd5s9SSUdN7nx7a3h" target="_blank" rel="noreferrer">Open in Spotify</a>
         </div>
       </div>
       <article class="spotify-player-card">
-        <img class="radio-show-art" src="/images/coastal%20static%20image.png" alt="Coastal Static Radio Show artwork">
         <iframe src="https://open.spotify.com/embed/playlist/1s2yftd5s9SSUdN7nx7a3h?utm_source=generator"
           width="100%" height="380" frameborder="0"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -131,55 +156,61 @@
   <section id="channels" class="section radio-section">
     <div class="wrap">
       <div class="section-heading">
-        <span class="eyebrow">Channels</span>
+        <span class="eyebrow">Shows + Signals</span>
         <h2>Station Dial</h2>
-        <p>The main station is live through Spotify. These channels shape the world around it and point listeners deeper into the roster.</p>
+        <p>Shows point to video releases. Signals point to playlist feeds and artist worlds.</p>
       </div>
       <div class="radio-channel-grid">
         <article class="radio-channel radio-channel-live">
           <span class="channel-number">01</span>
-          <h3>KMX Main Signal</h3>
-          <p>Roster-wide entry point for the Knight Music X universe: anti-pop, folk ghosts, ambient loops, country-trap, and strange coastal transmissions.</p>
-          <a href="/#releases">Start with featured signals</a>
+          <h3>Coastal Static Radio Show</h3>
+          <p>The current KMX show format. Episode 1 is live on YouTube.</p>
+          <a href="#shows">Watch the show</a>
         </article>
         <article class="radio-channel">
           <span class="channel-number">02</span>
+          <h3>KMX Main Signal</h3>
+          <p>Roster-wide playlist entry point for anti-pop, folk ghosts, ambient loops, country-trap, and coastal transmissions.</p>
+          <a href="#station-player">Tune KMX Radio</a>
+        </article>
+        <article class="radio-channel">
+          <span class="channel-number">03</span>
           <h3>Crumby Island Public Access</h3>
           <p>Mockumentary dispatches, civic panic, fry crime, and warning messages from a town that insists everything is under control.</p>
           <a href="/crumby-island.html">Open Crumby Island</a>
         </article>
         <article class="radio-channel">
-          <span class="channel-number">03</span>
+          <span class="channel-number">04</span>
           <h3>Lil’ Cabbage Country-Trap Hour</h3>
           <p>Rainy ferry blues, outlaw hooks, ChairGate fallout, and the soft heart hiding behind the flex.</p>
           <a href="#lil-cabbage-theme">Tune Raccoon Executive</a>
         </article>
         <article class="radio-channel">
-          <span class="channel-number">04</span>
+          <span class="channel-number">05</span>
           <h3>Marcy Daydream Soft Focus</h3>
           <p>Tender indie melancholy, hoodie-weather choruses, and songs that feel like staring through rainy glass.</p>
           <a href="#marcy-daydream-theme">Tune Dissolve</a>
         </article>
         <article class="radio-channel">
-          <span class="channel-number">05</span>
+          <span class="channel-number">06</span>
           <h3>Baie Verte B’ys Ghost-Folk</h3>
           <p>Salt-air stories, kitchen-party echoes, and Newfoundland folk signals from somewhere just offshore.</p>
           <a href="#baie-verte-bys-theme">Tune Fog</a>
         </article>
         <article class="radio-channel">
-          <span class="channel-number">06</span>
+          <span class="channel-number">07</span>
           <h3>SecretMXTP After Dark</h3>
           <p>Lo-fi tape ghosts, late-night Cumberland snapshots, and cassette-scene fragments from the edge of the woods.</p>
           <a href="/artists/secretmxtp.html">Tune secretmxtp</a>
         </article>
         <article class="radio-channel">
-          <span class="channel-number">07</span>
+          <span class="channel-number">08</span>
           <h3>SnackTrap Train Loops</h3>
           <p>Deutschrap for riding trains, offline loops, and low-light station-platform motion.</p>
           <a href="/artists/snacktrap.html">Tune SnackTrap</a>
         </article>
         <article class="radio-channel">
-          <span class="channel-number">08</span>
+          <span class="channel-number">09</span>
           <h3>Hushnoise Sleep Band</h3>
           <p>Ambient sleep loops, dim rooms, soft noise, and the station slowly drifting out past midnight.</p>
           <a href="/artists/hushnoise.html">Tune Hushnoise</a>

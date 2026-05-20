@@ -506,17 +506,58 @@ body {
   align-items: center;
 }
 
+.radio-show-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(280px, 1.15fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
 .radio-player-grid-secondary {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);
 }
 
-.radio-player-grid h2 {
+.radio-player-grid h2,
+.radio-show-grid h2 {
   margin: 0 0 .75rem;
   max-width: 10ch;
   font-size: clamp(2.2rem, 5vw, 4rem);
   line-height: 1;
+}
+
+.radio-show-card {
+  overflow: hidden;
+  padding: .7rem;
+  border: 1px solid rgba(193,243,125,.22);
+  border-radius: 8px;
+  background:
+    linear-gradient(150deg, rgba(193,243,125,.08), rgba(155,135,245,.045)),
+    var(--card);
+  box-shadow: 0 18px 50px rgba(0,0,0,.24);
+}
+
+.radio-show-card div {
+  padding: .3rem .1rem .1rem;
+}
+
+.radio-show-card span {
+  display: block;
+  color: #f0b35e;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.radio-show-card h3 {
+  margin: .45rem 0 .35rem;
+}
+
+.radio-show-card p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .spotify-player-card {
@@ -578,7 +619,8 @@ body {
   .hero-wrap,
   .world-grid,
   .radio-hero-grid,
-  .radio-player-grid { grid-template-columns: 1fr; }
+  .radio-player-grid,
+  .radio-show-grid { grid-template-columns: 1fr; }
   .hero { padding: 2.5rem 0; }
   .hero h1 { font-size: clamp(2.8rem, 14vw, 4.5rem); }
   .hero-collage {
