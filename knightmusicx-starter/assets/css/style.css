@@ -536,6 +536,16 @@ body {
   border-radius: 8px;
 }
 
+.radio-show-art {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: .7rem;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
 .broadcast-log {
   display: grid;
   gap: .75rem;
