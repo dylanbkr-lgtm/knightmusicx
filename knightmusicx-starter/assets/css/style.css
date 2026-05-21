@@ -522,8 +522,8 @@ body {
 .radio-player-grid h2,
 .radio-show-grid h2 {
   margin: 0 0 .75rem;
-  max-width: 10ch;
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  max-width: 16ch;
+  font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1;
 }
 
