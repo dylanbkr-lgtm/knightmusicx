@@ -137,6 +137,9 @@ body {
 .release-card .card-media iframe {
   height: 100%;
 }
+.release-card .listen-card-media {
+  aspect-ratio: 16 / 9;
+}
 .card-body { display: flex; flex: 1; flex-direction: column; padding: 1rem; }
 .card-body h3 { margin-top: 0; }
 .card-body p { color: var(--muted); }
