@@ -439,6 +439,55 @@ body {
     var(--bg);
 }
 
+.radio-path {
+  padding: 1rem 0;
+  background: #0e1014;
+}
+
+.radio-path-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+.radio-path-grid a {
+  display: block;
+  min-width: 0;
+  padding: .9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255,255,255,.025);
+  color: var(--text);
+  text-decoration: none;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.radio-path-grid a:hover,
+.radio-path-grid a:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--focus);
+  box-shadow: 0 10px 28px rgba(0,0,0,.22);
+  outline: none;
+}
+
+.radio-path-grid span,
+.radio-path-grid strong {
+  display: block;
+}
+
+.radio-path-grid span {
+  color: #f0b35e;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.radio-path-grid strong {
+  margin-top: .25rem;
+  line-height: 1.2;
+}
+
 .radio-channel-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -631,6 +680,7 @@ body {
   .signal-grid { grid-template-columns: 1fr; }
   .signal-grid div,
   .signal-grid div:last-child { border-right: 1px solid var(--border); }
+  .radio-path-grid { grid-template-columns: 1fr; }
   .contact-form .row { grid-template-columns: 1fr; }
   .artist-hero { grid-template-columns: 1fr; }
 }
