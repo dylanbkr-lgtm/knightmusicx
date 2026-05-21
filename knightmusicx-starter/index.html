@@ -258,40 +258,47 @@
   </section>
 
   <section id="lore" class="section world-section">
-    <div class="wrap world-grid">
-      <div>
-        <span class="eyebrow">World</span>
-        <h2>Enter Crumby Island</h2>
-        <p class="section-copy">Crumby Island carries the coastal comedy world behind Lil' Cabbage: dock dust, ferry static, civic folklore, and outlaw country-trap energy.</p>
-      </div>
-      <div class="world-actions">
-        <a class="world-link" href="/crumby-island.html">
-          <span>Crumby Island</span>
-          <strong>Open the island</strong>
+    <div class="wrap">
+      <div class="split-panel crumby-panel">
+        <div class="split-copy">
+          <span class="eyebrow">// Story World</span>
+          <h2>Enter<br><span>Crumby</span><br>Island</h2>
+          <p>Crumby Island carries the coastal comedy world behind Lil' Cabbage: dock dust, ferry static, civic folklore, and outlaw country-trap energy.</p>
+          <a class="btn island" href="/crumby-island.html">Open the Island</a>
+        </div>
+        <a class="split-media" href="/crumby-island.html" aria-label="Open Crumby Island">
+          <img src="/images/lilcabbageartist.jpeg" alt="Lil’ Cabbage artist image">
+          <span>Crumby Island Archive</span>
         </a>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section alt">
+  <section id="contact" class="section contact-section">
     <div class="wrap">
-      <h2>Contact</h2>
-      <p>Bring the strange project. We will figure out the signal. Collabs, sync, licensing, and project inquiries: <a href="mailto:contact@knightmusicx.com">contact@knightmusicx.com</a></p>
-      <div class="socials">
-        <a href="https://www.instagram.com/lil_cabbage982/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">Instagram</a>
-        <a href="https://www.tiktok.com/@lilcabbagex?lang=en" target="_blank" rel="noreferrer" aria-label="TikTok">TikTok</a>
-        <a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer" aria-label="YouTube">YouTube</a>
-        <a href="https://www.facebook.com/Cabbagepatchtrap" target="_blank" rel="noreferrer" aria-label="Facebook">Facebook</a>
-      </div>
-      <form name="contact" method="POST" data-netlify="true" class="contact-form">
-        <input type="hidden" name="form-name" value="contact">
-        <div class="row">
-          <label><span>Name</span><input type="text" name="name" required></label>
-          <label><span>Email</span><input type="email" name="email" required></label>
+      <div class="contact-panel">
+        <div class="split-copy">
+          <span class="eyebrow">// Get In Touch</span>
+          <h2>Bring<br>Your Weird<br>Project.</h2>
+          <p>Collabs, sync licensing, press inquiries, and general transmissions. We will figure out the signal.</p>
+          <a class="contact-email" href="mailto:contact@knightmusicx.com">contact@knightmusicx.com</a>
+          <div class="socials">
+            <a href="https://www.instagram.com/lil_cabbage982/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">Instagram</a>
+            <a href="https://www.tiktok.com/@lilcabbagex?lang=en" target="_blank" rel="noreferrer" aria-label="TikTok">TikTok</a>
+            <a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer" aria-label="YouTube">YouTube</a>
+            <a href="https://www.facebook.com/Cabbagepatchtrap" target="_blank" rel="noreferrer" aria-label="Facebook">Facebook</a>
+          </div>
         </div>
-        <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
-        <button type="submit" class="btn primary">Send</button>
-      </form>
+        <form name="contact" method="POST" data-netlify="true" class="contact-form">
+          <input type="hidden" name="form-name" value="contact">
+          <div class="row">
+            <label><span>Name</span><input type="text" name="name" required></label>
+            <label><span>Email</span><input type="email" name="email" required></label>
+          </div>
+          <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+          <button type="submit" class="btn primary">Send Transmission</button>
+        </form>
+      </div>
     </div>
   </section>
 </main>
@@ -299,6 +306,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>© <span id="year"></span> Knight Music X. All rights reserved.</p>
+    <strong>KNIGHTX</strong>
   </div>
 </footer>
 
