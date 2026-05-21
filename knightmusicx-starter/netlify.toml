@@ -7,6 +7,7 @@
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; img-src 'self' data: https:; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://open.spotify.com https://www.youtube.com https://youtube.com; form-action 'self'; upgrade-insecure-requests"
 
 # Example: pretty URL redirects (uncomment to use)
 # [[redirects]]
