@@ -33,6 +33,54 @@ body {
 .nav a { color: var(--muted); text-decoration: none; }
 .nav a:hover { color: var(--text); }
 
+.home-page {
+  --bg: #0a0a0b;
+  --bg-alt: #101012;
+  --text: #f0ede6;
+  --muted: rgba(240,237,230,.48);
+  --brand: #c8f060;
+  --card: #131316;
+  --border: rgba(255,255,255,.08);
+  --focus: #c8f060;
+  font-family: Syne, Inter, system-ui, sans-serif;
+}
+.home-page .wrap { width: min(1400px, calc(100% - 5rem)); }
+.home-page .site-header {
+  background: rgba(10,10,11,.88);
+  backdrop-filter: blur(14px);
+}
+.home-page .site-header .wrap { padding: 1.05rem 0; }
+.home-page .brand {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.home-page .brand span { color: var(--focus); }
+.home-page .nav a,
+.home-page .btn {
+  font-family: "Space Mono", monospace;
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.home-page .btn {
+  border-radius: 0;
+  min-height: 2.75rem;
+  padding: .75rem 1.25rem;
+}
+.home-page .btn.primary {
+  background: var(--focus);
+  color: #0a0a0b;
+}
+.home-page .btn.primary:hover,
+.home-page .btn.primary:focus-visible {
+  background: transparent;
+  border-color: var(--focus);
+  color: var(--focus);
+}
+
 .hero {
   position: relative;
   min-height: calc(100vh - 66px);
@@ -272,6 +320,43 @@ body {
   margin: 0;
 }
 
+.home-page .section {
+  padding: 0;
+  background: var(--bg);
+}
+.home-page .section.alt {
+  background: var(--bg);
+}
+.home-page .section > .wrap {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+.home-page .section-heading {
+  max-width: none;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.home-page .section-heading .eyebrow,
+.home-page .eyebrow {
+  color: var(--focus);
+  font-family: "Space Mono", monospace;
+  font-size: .62rem;
+  letter-spacing: .18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.home-page .section-heading h2 {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 400;
+  letter-spacing: .02em;
+  line-height: .9;
+}
+.home-page .section-heading p {
+  max-width: 680px;
+  margin-top: .8rem;
+}
+
 .listen-section {
   background:
     linear-gradient(180deg, rgba(255,255,255,.018), transparent 28%),
@@ -294,6 +379,9 @@ body {
   line-height: .88;
 }
 .listen-heading h2 span { color: rgba(231,233,238,.22); }
+.home-page .listen-heading {
+  padding-top: 0;
+}
 .featured-player {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(340px, 1fr);
@@ -345,6 +433,23 @@ body {
   font-weight: 400;
   letter-spacing: .02em;
   line-height: .92;
+}
+.home-page .featured-player,
+.home-page .tracklist,
+.home-page .playlist-panel {
+  border-color: var(--border);
+  background: rgba(255,255,255,.012);
+}
+.home-page .featured-context,
+.home-page .featured-embed,
+.home-page .playlist-panel > div,
+.home-page .playlist-panel iframe {
+  padding: clamp(1.5rem, 3.5vw, 3rem);
+}
+.home-page .featured-context h3,
+.home-page .playlist-panel h3,
+.home-page .track-main strong {
+  font-family: "Bebas Neue", Impact, sans-serif;
 }
 .featured-context p:not(.featured-artist),
 .playlist-panel p {
@@ -632,6 +737,12 @@ body {
   text-transform: uppercase;
 }
 .artist-grid { list-style:none; padding:0; margin:0; display:grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: .85rem; }
+.home-page .artist-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
 .artist-grid li[hidden] { display: none; }
 .artist-grid a {
   display: block;
@@ -642,6 +753,11 @@ body {
   color:var(--text);
   text-decoration:none;
   transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.home-page .artist-grid a {
+  border-top: 0;
+  border-left: 0;
+  border-radius: 0;
 }
 .artist-image {
   position: relative;
@@ -676,6 +792,9 @@ body {
   background: rgba(0,0,0,.52);
   color: var(--text);
 }
+.home-page .artist-image span {
+  background: rgba(10,10,11,.78);
+}
 .artist-image b {
   top: .65rem;
   right: .65rem;
@@ -687,6 +806,9 @@ body {
   transform: translateY(-4px);
   transition: opacity .18s ease, transform .18s ease;
 }
+.home-page .artist-image b {
+  border-radius: 0;
+}
 .artist-name,
 .artist-tag {
   display: block;
@@ -696,6 +818,13 @@ body {
   font-weight: 700;
   line-height: 1.2;
   transition: color .18s ease;
+}
+.home-page .artist-name {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  text-transform: uppercase;
 }
 .artist-tag {
   margin-top: .3rem;
@@ -708,8 +837,12 @@ body {
 
 .world-section {
   background:
-    linear-gradient(90deg, rgba(155,135,245,.08), transparent 46%),
+    linear-gradient(90deg, rgba(96,200,240,.08), transparent 46%),
     var(--bg);
+}
+.home-page .world-section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 .world-grid {
   display: grid;
@@ -737,6 +870,9 @@ body {
   text-decoration: none;
   transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
+.home-page .world-link {
+  border-radius: 0;
+}
 .world-link span,
 .world-link strong {
   display: block;
@@ -751,8 +887,8 @@ body {
 .world-link:hover,
 .world-link:focus-visible {
   transform: translateY(-2px);
-  border-color: var(--brand);
-  box-shadow: 0 10px 30px rgba(155,135,245,0.12);
+  border-color: var(--focus);
+  box-shadow: 0 10px 30px rgba(193,243,125,.10);
   outline: none;
 }
 
@@ -1226,8 +1362,11 @@ body {
 
 @media (max-width: 520px) {
   .wrap { width: min(100% - 2rem, 1100px); }
+  .home-page .wrap { width: min(100% - 2rem, 1400px); }
   .brand { font-size: .98rem; }
+  .home-page .brand { font-size: 1.2rem; }
   .nav a { font-size: .92rem; }
+  .home-page .nav a { font-size: .72rem; }
   .hero-wrap { gap: 1.5rem; }
   .hero-copy { padding-top: .5rem; }
   .hero-eyebrow { font-size: .62rem; letter-spacing: .1em; }
