@@ -328,7 +328,12 @@ body {
   background: var(--bg);
 }
 .home-page .section > .wrap {
+  position: relative;
   padding-block: clamp(3rem, 6vw, 5rem);
+}
+.anchor-alias {
+  position: absolute;
+  top: 0;
 }
 .home-page .section-heading {
   max-width: none;
@@ -940,6 +945,14 @@ body {
 }
 .contact-email:hover,
 .contact-email:focus-visible { text-decoration: underline; }
+.socials-label {
+  margin: .8rem 0 -.45rem;
+  color: var(--muted);
+  font-family: "Space Mono", monospace;
+  font-size: .58rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
 .home-page .socials {
   display: flex;
   flex-wrap: wrap;
