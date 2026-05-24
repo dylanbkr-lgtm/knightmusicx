@@ -214,7 +214,8 @@
         <div class="quiz-copy">
           <span class="quiz-kicker">KMX routing desk</span>
           <h3>Find the artist frequency that fits your weather.</h3>
-          <p>Pick fast. Overthinking produces municipal paperwork.</p>
+          <p data-quiz-teaser>Pick fast. Overthinking produces municipal paperwork.</p>
+          <strong class="quiz-big-step" data-quiz-big-step>01</strong>
           <div class="quiz-progress" aria-label="Quiz progress">
             <span data-quiz-step-label>Question 1 of 5</span>
             <b data-quiz-progress-bar></b>
@@ -257,11 +258,16 @@
             <button type="button" data-points="knight:2,sylphina:1,victoria-victrola:1">Outer signal / no fixed address</button>
           </fieldset>
           <div class="quiz-result" hidden data-quiz-result>
-            <span>Your signal is</span>
+            <div class="quiz-result-art">
+              <img src="/images/lilcabbageartist.jpeg" alt="" data-result-image>
+              <span data-result-tag>Signal locked</span>
+            </div>
+            <span>You got</span>
             <h3 data-result-name></h3>
             <p data-result-copy></p>
             <div class="quiz-actions">
               <a class="btn primary" href="#" data-result-link>Open Artist</a>
+              <a class="btn spotify-btn" href="#" target="_blank" rel="noreferrer" data-result-spotify>Spotify</a>
               <button class="btn" type="button" data-quiz-reset>Retune</button>
               <button class="btn" type="button" data-quiz-share>Copy Share Text</button>
             </div>
