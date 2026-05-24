@@ -673,6 +673,129 @@ body {
   padding: clamp(1.25rem, 4vw, 2.5rem);
 }
 
+.quiz-section {
+  background:
+    linear-gradient(90deg, rgba(193,243,125,.05), transparent 42%),
+    linear-gradient(180deg, rgba(255,255,255,.018), transparent 30%),
+    var(--bg);
+}
+.quiz-panel {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(340px, 1.15fr);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.012);
+}
+.quiz-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 430px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-right: 1px solid var(--border);
+}
+.quiz-kicker,
+.quiz-progress span,
+.quiz-result > span,
+.quiz-share-status {
+  color: var(--muted);
+  font-family: "Space Mono", monospace;
+  font-size: .6rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.quiz-copy h3,
+.quiz-result h3 {
+  margin: 0;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(2.7rem, 5vw, 4.6rem);
+  font-weight: 400;
+  letter-spacing: .02em;
+  line-height: .9;
+}
+.quiz-copy p,
+.quiz-result p {
+  max-width: 48ch;
+  color: var(--muted);
+}
+.quiz-progress {
+  display: grid;
+  gap: .7rem;
+}
+.quiz-progress::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background: var(--border);
+}
+.quiz-progress b {
+  display: block;
+  width: 20%;
+  height: 3px;
+  background: var(--focus);
+  transition: width .2s ease;
+}
+.quiz-stage {
+  min-height: 430px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+.quiz-question {
+  display: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.quiz-question.active {
+  display: grid;
+  gap: .75rem;
+}
+.quiz-question legend {
+  margin-bottom: 1.2rem;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: .03em;
+  line-height: .95;
+}
+.quiz-question button {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.018);
+  color: var(--text);
+  cursor: pointer;
+  padding: 1rem;
+  text-align: left;
+  font-family: Syne, Inter, system-ui, sans-serif;
+  font-size: .95rem;
+  transition: background .16s ease, border-color .16s ease, transform .16s ease;
+}
+.quiz-question button:hover,
+.quiz-question button:focus-visible {
+  border-color: var(--focus);
+  background: rgba(193,243,125,.06);
+  outline: none;
+  transform: translateX(4px);
+}
+.quiz-result {
+  display: grid;
+  gap: 1rem;
+}
+.quiz-result[hidden] { display: none; }
+.quiz-result h3 {
+  color: var(--focus);
+}
+.quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin-top: .5rem;
+}
+.quiz-share-status {
+  min-height: 1.2em;
+  margin: 0;
+  color: var(--focus);
+}
+
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display:flex; flex-direction:column; }
 .card-media { display: block; min-height: 220px; background: #0e1118; }
@@ -1521,6 +1644,7 @@ body {
   .hero-wrap,
   .featured-player,
   .playlist-panel,
+  .quiz-panel,
   .split-panel,
   .contact-panel,
   .world-grid,
@@ -1547,6 +1671,7 @@ body {
   .listen-heading { display: block; }
   .featured-context,
   .playlist-panel > div,
+  .quiz-copy,
   .split-copy {
     border-right: 0;
     border-bottom: 1px solid var(--border);
@@ -1556,6 +1681,8 @@ body {
   .track-row { grid-template-columns: 40px minmax(0, 1fr) auto; }
   .tracklist-header { grid-template-columns: 1fr; }
   .track-platform { display: none; }
+  .quiz-copy,
+  .quiz-stage { min-height: 0; }
   .radio-path-grid { grid-template-columns: 1fr; }
   .contact-form .row { grid-template-columns: 1fr; }
   .artist-hero { grid-template-columns: 1fr; }
@@ -1578,6 +1705,8 @@ body {
   .featured-embed,
   .playlist-panel > div,
   .playlist-panel iframe,
+  .quiz-copy,
+  .quiz-stage,
   .split-copy,
   .home-page .contact-form { padding: 1rem; }
   .embed-panel iframe,
@@ -1657,7 +1786,7 @@ body {
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .artist-grid a, .artist-grid a img, .artist-image b, .card, .btn, .hero::before, .signal-dot, .live-dot, .ticker-inner, .track-num b {
+  .artist-grid a, .artist-grid a img, .artist-image b, .card, .btn, .hero::before, .signal-dot, .live-dot, .ticker-inner, .track-num b, .quiz-progress b {
     animation: none !important;
     transition: none !important;
   }
