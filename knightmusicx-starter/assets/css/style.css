@@ -11,6 +11,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { height: 100%; }
 body {
   margin: 0;
@@ -842,6 +843,32 @@ body {
 }
 .quiz-result h3 {
   color: var(--focus);
+}
+.quiz-share-field {
+  display: grid;
+  gap: .45rem;
+}
+.quiz-share-field span {
+  color: var(--muted);
+  font-family: "Space Mono", monospace;
+  font-size: .58rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.quiz-share-field textarea {
+  width: 100%;
+  min-height: 5.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: rgba(255,255,255,.025);
+  color: var(--text);
+  font: 400 .85rem/1.55 Syne, Inter, system-ui, sans-serif;
+  padding: .8rem;
+  resize: vertical;
+}
+.quiz-share-field textarea:focus {
+  border-color: var(--focus);
+  outline: none;
 }
 .quiz-actions {
   display: flex;

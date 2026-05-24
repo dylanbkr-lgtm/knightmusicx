@@ -52,6 +52,7 @@ if (quiz) {
   const resultSpotify = quiz.querySelector('[data-result-spotify]');
   const resultImage = quiz.querySelector('[data-result-image]');
   const resultTag = quiz.querySelector('[data-result-tag]');
+  const shareText = quiz.querySelector('[data-share-text]');
   const shareStatus = quiz.querySelector('[data-share-status]');
   const scores = {};
   let currentQuestion = 0;
@@ -189,6 +190,7 @@ if (quiz) {
   function showResult() {
     const winner = Object.entries(scores).sort((a, b) => b[1] - a[1])[0]?.[0] || 'lil-cabbage';
     currentResult = artists[winner];
+    const text = `KMX assigned me ${currentResult.name}. Apparently I'm ${currentResult.prompt}. https://www.knightmusicx.com/#signal-quiz`;
     questions.forEach((question) => question.classList.remove('active'));
     if (stepLabel) stepLabel.textContent = 'Signal locked';
     if (progressBar) progressBar.style.width = '100%';
@@ -204,6 +206,7 @@ if (quiz) {
       resultImage.alt = `${currentResult.name} signal artwork`;
     }
     if (resultTag) resultTag.textContent = currentResult.prompt;
+    if (shareText) shareText.value = text;
     if (shareStatus) shareStatus.textContent = '';
     if (resultPanel) resultPanel.hidden = false;
   }
@@ -228,12 +231,14 @@ if (quiz) {
 
   quiz.querySelector('[data-quiz-share]')?.addEventListener('click', async () => {
     if (!currentResult) return;
-    const text = `KMX assigned me ${currentResult.name}. Apparently I'm ${currentResult.prompt}. https://www.knightmusicx.com/#signal-quiz`;
+    const text = shareText?.value || `KMX assigned me ${currentResult.name}. Apparently I'm ${currentResult.prompt}. https://www.knightmusicx.com/#signal-quiz`;
     try {
       await navigator.clipboard.writeText(text);
       if (shareStatus) shareStatus.textContent = 'Copied signal text.';
     } catch {
-      if (shareStatus) shareStatus.textContent = text;
+      shareText?.focus();
+      shareText?.select();
+      if (shareStatus) shareStatus.textContent = 'Clipboard blocked. Text selected above.';
     }
   });
 
