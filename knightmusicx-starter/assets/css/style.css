@@ -1888,9 +1888,12 @@ body {
   overflow: hidden;
   padding: clamp(4rem, 9vw, 7rem) 0;
   background:
-    radial-gradient(circle at 15% 20%, rgba(255, 169, 77, 0.10), transparent 28%),
-    radial-gradient(circle at 80% 10%, rgba(120, 180, 255, 0.10), transparent 24%),
+    linear-gradient(90deg, rgba(240,179,94,.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(240,179,94,.04) 1px, transparent 1px),
+    radial-gradient(circle at 15% 20%, rgba(255, 169, 77, 0.08), transparent 28%),
+    radial-gradient(circle at 80% 10%, rgba(120, 180, 255, 0.08), transparent 24%),
     linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.18));
+  background-size: 26px 26px, 26px 26px, auto, auto, auto;
 }
 
 .hero-crumby::after {
@@ -1919,7 +1922,36 @@ body {
 }
 
 .crumby-hero-copy h1 {
-  max-width: 8ch;
+  max-width: 9ch;
+}
+
+.civic-alert {
+  max-width: 760px;
+  margin: 0 0 1.25rem;
+  border: 2px solid #f0b35e;
+  background:
+    repeating-linear-gradient(135deg, rgba(240,179,94,.14) 0, rgba(240,179,94,.14) 8px, rgba(255,255,255,.02) 8px, rgba(255,255,255,.02) 16px),
+    rgba(12,14,18,.92);
+  box-shadow: 0 18px 44px rgba(0,0,0,.25);
+}
+
+.civic-alert span {
+  display: block;
+  padding: .55rem .75rem;
+  background: #f0b35e;
+  color: #111;
+  font-size: .74rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.civic-alert p {
+  margin: 0;
+  padding: .9rem .95rem 1rem;
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 .crumby-poster img {
@@ -2154,6 +2186,27 @@ body {
   transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
 
+.character-card {
+  position: relative;
+  border-radius: 2px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015)),
+    var(--card);
+}
+
+.character-card::after {
+  content: "MUNICIPAL FILE";
+  position: absolute;
+  right: .85rem;
+  bottom: .75rem;
+  color: rgba(240,179,94,.16);
+  font-size: .66rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  transform: rotate(-6deg);
+  pointer-events: none;
+}
+
 .feature-card-media {
   overflow: hidden;
   padding: 0;
@@ -2197,6 +2250,24 @@ body {
   text-transform: uppercase;
 }
 
+.file-strip {
+  display: flex;
+  justify-content: space-between;
+  gap: .7rem;
+  margin: -.2rem -.2rem .9rem;
+  padding-bottom: .65rem;
+  border-bottom: 1px dashed rgba(255,255,255,.18);
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.file-strip strong {
+  color: #f0b35e;
+}
+
 .crumby-field-guide {
   background:
     linear-gradient(180deg, rgba(193,243,125,.05), transparent 38%),
@@ -2213,9 +2284,9 @@ body {
   min-height: 220px;
   padding: 1.1rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 2px;
   background:
-    linear-gradient(145deg, rgba(155,135,245,.10), rgba(193,243,125,.04)),
+    linear-gradient(180deg, rgba(240,179,94,.08), rgba(255,255,255,.02)),
     var(--card);
 }
 
@@ -2226,12 +2297,93 @@ body {
 }
 
 .lore-card h3 {
-  margin: 2.4rem 0 .55rem;
+  margin: 1.5rem 0 .4rem;
+}
+
+.lore-card small {
+  display: block;
+  margin-bottom: .7rem;
+  color: rgba(240,237,230,.62);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
 }
 
 .lore-card p {
   margin: 0;
   color: var(--muted);
+}
+
+.civic-board-section {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(240,179,94,.09), transparent 30%),
+    #0d0f12;
+}
+
+.bulletin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+.bulletin-note {
+  position: relative;
+  min-height: 190px;
+  padding: 1.1rem;
+  border: 1px solid rgba(30,24,14,.22);
+  border-radius: 2px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.5), rgba(255,255,255,.16)),
+    #d9c797;
+  color: #1c1710;
+  box-shadow: 0 16px 38px rgba(0,0,0,.24);
+  transform: rotate(-.5deg);
+}
+
+.bulletin-note:nth-child(even) {
+  transform: rotate(.7deg);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.44), rgba(255,255,255,.12)),
+    #c6d3b1;
+}
+
+.bulletin-note::before {
+  content: "";
+  position: absolute;
+  top: .55rem;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #8f2d28;
+  box-shadow: 0 2px 5px rgba(0,0,0,.28);
+}
+
+.bulletin-note strong,
+.bulletin-note span {
+  display: block;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.bulletin-note strong {
+  margin-top: .5rem;
+}
+
+.bulletin-note p {
+  margin: .8rem 0 1rem;
+  color: #211a12;
+  line-height: 1.5;
+}
+
+.bulletin-note span {
+  position: absolute;
+  left: 1.1rem;
+  bottom: .95rem;
+  color: rgba(28,23,16,.58);
+  font-size: .68rem;
 }
 
 .crumby-broadcast {
