@@ -870,6 +870,11 @@ body {
   border-color: var(--focus);
   outline: none;
 }
+.quiz-copy-btn {
+  justify-self: start;
+  margin-top: .15rem;
+  box-shadow: 0 0 24px rgba(200,240,96,.12);
+}
 .quiz-actions {
   display: flex;
   flex-wrap: wrap;
