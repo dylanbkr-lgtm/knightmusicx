@@ -3,442 +3,698 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Crumby Island — Knight Music X</title>
-  <meta name="description" content="Cumberland Chronicles grew into Crumby Island: a mockumentary comedy universe of fry crime, rogue wildlife, civic drama, and Lil’ Cabbage lore.">
-  <meta property="og:title" content="Crumby Island — Knight Music X">
-  <meta property="og:description" content="Cumberland Chronicles, dock chaos, ferry static, and West Coast outlaw comedy. Enter Crumby Island.">
+  <title>Crumby Island Municipal Portal — Official Civic Website</title>
+  <meta name="description" content="Crumby Island Municipal Portal: civic alerts, incident files, known persons, public notices, and Cumberland Chronicles broadcasts.">
+  <meta property="og:title" content="Crumby Island Municipal Portal">
+  <meta property="og:description" content="ChairGate, the Fryspiracy, Zoo Crew activity, and the official unofficial civic record of Crumby Island.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/images/og-image.png">
-  <meta name="theme-color" content="#0f0f10">
+  <meta property="og:image" content="/images/crumby%20island%20story%20project%202.png">
+  <meta name="theme-color" content="#1a1208">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css?v=kmx-2026-05-21">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&family=Bebas+Neue&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --paper: #f2ead8;
+      --paper2: #e8dfc4;
+      --paper3: #ddd4b8;
+      --ink: #1a1208;
+      --ink2: #2e2410;
+      --muted: rgba(26,18,8,.56);
+      --border: rgba(26,18,8,.15);
+      --border2: rgba(26,18,8,.32);
+      --red: #8b1a1a;
+      --amber: #c47b00;
+      --green: #2a5c2a;
+      --blue: #1a3c78;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      background: #c8bfa8;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(26,18,8,.04) 28px, rgba(26,18,8,.04) 29px),
+        repeating-linear-gradient(90deg, transparent, transparent 28px, rgba(26,18,8,.02) 28px, rgba(26,18,8,.02) 29px);
+      color: var(--ink);
+      font-family: "Share Tech Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      pointer-events: none;
+      opacity: .04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    a { color: inherit; }
+    .page { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+    .civic-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--ink);
+      color: var(--paper);
+      border-bottom: 4px solid var(--amber);
+    }
+    .civic-header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: .7rem 2rem;
+      border-bottom: 1px solid rgba(242,234,216,.1);
+    }
+    .civic-seal { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+    .seal-circle {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      border: 2px solid var(--amber);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amber);
+      font-family: "Bebas Neue", sans-serif;
+      font-size: .6rem;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-align: center;
+    }
+    .civic-title {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.35rem;
+      letter-spacing: .12em;
+      line-height: 1;
+    }
+    .civic-subtitle {
+      margin-top: .15rem;
+      color: rgba(242,234,216,.55);
+      font-size: .55rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .civic-nav { display: flex; list-style: none; }
+    .civic-nav a {
+      display: block;
+      padding: .45rem .8rem;
+      border-left: 1px solid rgba(242,234,216,.08);
+      color: rgba(242,234,216,.58);
+      font-size: .56rem;
+      letter-spacing: .16em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background .15s, color .15s;
+    }
+    .civic-nav a:hover { color: var(--amber); background: rgba(196,123,0,.08); }
+    .alert-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      overflow: hidden;
+      padding: .45rem 2rem;
+      background: var(--amber);
+      color: var(--ink);
+    }
+    .alert-prefix {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      flex: 0 0 auto;
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .alert-blink {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+      animation: blink .9s ease infinite;
+    }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .1; } }
+    .alert-track { overflow: hidden; flex: 1; }
+    .alert-inner {
+      display: flex;
+      gap: 5rem;
+      width: max-content;
+      white-space: nowrap;
+      animation: alertscroll 34s linear infinite;
+    }
+    @keyframes alertscroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .alert-item { flex: 0 0 auto; font-size: .62rem; letter-spacing: .1em; }
+    .hero-doc {
+      position: relative;
+      overflow: hidden;
+      margin: 2rem 0;
+      background: var(--paper);
+      border: 1px solid var(--border2);
+      box-shadow: 4px 4px 0 rgba(26,18,8,.12), 8px 8px 0 rgba(26,18,8,.06);
+    }
+    .hero-doc::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: repeating-linear-gradient(90deg, var(--red) 0, var(--red) 20px, var(--amber) 20px, var(--amber) 40px, var(--green) 40px, var(--green) 60px, var(--ink) 60px, var(--ink) 80px);
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 3rem;
+      padding: 3rem 3rem 2.5rem;
+      margin-top: 6px;
+    }
+    .hero-doc-label {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      margin-bottom: 1.2rem;
+      color: var(--muted);
+      font-size: .6rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+    }
+    .hero-doc-label::before { content: ""; width: 24px; height: 1px; background: var(--muted); }
+    .hero-title {
+      margin-bottom: 1.2rem;
+      font-family: "Special Elite", cursive;
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: .92;
+    }
+    .hero-title em { color: var(--red); font-style: normal; }
+    .hero-tagline {
+      max-width: 500px;
+      margin-bottom: 2rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--amber);
+      color: var(--muted);
+      font-size: .8rem;
+      line-height: 1.7;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: .8rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      min-height: 2.35rem;
+      padding: .7rem 1.15rem;
+      border: 1px solid;
+      background: transparent;
+      font-family: "Share Tech Mono", monospace;
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background .15s, color .15s;
+    }
+    .btn-civic { border-color: var(--ink); color: var(--ink); }
+    .btn-civic:hover { background: var(--ink); color: var(--paper); }
+    .btn-red { border-color: var(--red); color: var(--red); }
+    .btn-red:hover { background: var(--red); color: var(--paper); }
+    .btn-amber { border-color: var(--amber); color: var(--amber); }
+    .btn-amber:hover { background: var(--amber); color: var(--ink); }
+    .status-panel {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+      background: var(--paper2);
+      border: 1px solid var(--border2);
+    }
+    .status-panel-title {
+      margin-bottom: 1rem;
+      padding-bottom: .6rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .58rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .status-row {
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+      padding: .8rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .status-row:last-child { border-bottom: 0; }
+    .status-key { color: var(--muted); font-size: .55rem; letter-spacing: .2em; text-transform: uppercase; }
+    .status-val { font-size: .85rem; letter-spacing: .05em; }
+    .status-badge {
+      display: inline-block;
+      width: fit-content;
+      margin-top: .2rem;
+      padding: .18rem .5rem;
+      border: 1px solid;
+      font-size: .52rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .badge-red { border-color: var(--red); color: var(--red); }
+    .badge-amber { border-color: var(--amber); color: var(--amber); }
+    .badge-green { border-color: var(--green); color: var(--green); }
+    .sec-head {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin: 3rem 0 1.5rem;
+      padding-bottom: .8rem;
+      border-bottom: 2px solid var(--ink2);
+    }
+    .sec-num { color: var(--border2); font-family: "Bebas Neue", sans-serif; font-size: 3rem; line-height: 1; letter-spacing: .05em; }
+    .sec-eyebrow { margin-bottom: .2rem; color: var(--muted); font-size: .55rem; letter-spacing: .25em; text-transform: uppercase; }
+    .sec-title { font-family: "Special Elite", cursive; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1; }
+    .incident-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .incident-file {
+      position: relative;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--border2);
+      box-shadow: 3px 3px 0 rgba(26,18,8,.08);
+      transition: transform .15s, box-shadow .15s;
+    }
+    .incident-file:hover { transform: translateY(-2px); box-shadow: 5px 6px 0 rgba(26,18,8,.12); }
+    .incident-file::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-style: solid;
+      border-width: 0 28px 28px 0;
+      border-color: transparent var(--red) transparent transparent;
+    }
+    .file-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .7rem 1.2rem;
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .file-number { color: var(--amber); font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; }
+    .file-status-dot { width: 8px; height: 8px; border-radius: 50%; animation: blink .9s ease infinite; }
+    .dot-red { background: var(--red); }
+    .dot-amber { background: var(--amber); animation-delay: .3s; }
+    .file-body { padding: 1.2rem; }
+    .file-classification { margin-bottom: .5rem; color: var(--muted); font-size: .52rem; letter-spacing: .22em; text-transform: uppercase; }
+    .file-title { margin-bottom: .8rem; font-family: "Special Elite", cursive; font-size: 1.45rem; line-height: 1.1; }
+    .file-meta { display: grid; grid-template-columns: 1fr 1fr; gap: .55rem; margin-bottom: .9rem; }
+    .fmk { color: var(--muted); font-size: .5rem; letter-spacing: .2em; text-transform: uppercase; }
+    .fmv { margin-top: .1rem; font-size: .7rem; }
+    .file-desc { padding-top: .8rem; border-top: 1px dashed var(--border2); color: rgba(26,18,8,.72); font-size: .72rem; line-height: 1.65; }
+    .file-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .8rem 1.2rem;
+      border-top: 1px solid var(--border);
+    }
+    .file-footer a { color: var(--red); font-size: .58rem; font-weight: 700; letter-spacing: .15em; text-decoration: none; text-transform: uppercase; }
+    .file-footer a:hover { text-decoration: underline; }
+    .file-threat { padding: .18rem .5rem; border: 1px solid; font-size: .52rem; letter-spacing: .15em; text-transform: uppercase; }
+    .redacted {
+      display: inline;
+      padding: 0 4px;
+      background: var(--ink);
+      color: var(--ink);
+      cursor: help;
+      user-select: none;
+      transition: background .3s, color .3s;
+    }
+    .redacted:hover { background: transparent; color: var(--ink); }
+    .char-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border2);
+    }
+    .char-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 238px;
+      padding: 1.2rem 1rem;
+      background: var(--paper);
+      transition: background .15s;
+    }
+    .char-card:hover { background: var(--paper2); }
+    .char-img-wrap {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: .8rem;
+      background: var(--paper3);
+      border: 2px solid var(--border2);
+    }
+    .char-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top; filter: grayscale(40%) contrast(1.1); }
+    .char-img-placeholder { color: var(--border2); font-family: "Bebas Neue", sans-serif; font-size: 2rem; }
+    .char-role { margin-bottom: .25rem; color: var(--muted); font-size: .5rem; letter-spacing: .2em; text-transform: uppercase; }
+    .char-name { margin-bottom: .45rem; font-family: "Special Elite", cursive; font-size: 1rem; line-height: 1.1; }
+    .char-desc { color: var(--muted); font-size: .65rem; line-height: 1.5; }
+    .char-stamp {
+      position: absolute;
+      top: .8rem;
+      right: .8rem;
+      padding: .2rem .5rem;
+      border: 2px solid;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: .62rem;
+      letter-spacing: .1em;
+      line-height: 1;
+      text-align: center;
+      opacity: .86;
+      pointer-events: none;
+    }
+    .stamp-authorized { border-color: var(--green); color: var(--green); transform: rotate(8deg); }
+    .stamp-atlarge { border-color: var(--red); color: var(--red); transform: rotate(-6deg); }
+    .stamp-person { border-color: var(--amber); color: var(--amber); transform: rotate(5deg); }
+    .stamp-deployed { border-color: var(--ink); color: var(--ink); transform: rotate(-4deg); }
+    .stamp-surveillance { border-color: var(--blue); color: var(--blue); transform: rotate(7deg); }
+    .stamp-uncooperative { border-color: var(--red); color: var(--red); transform: rotate(-9deg); font-size: .5rem; }
+    .stamp-unknown { border-color: var(--amber); color: var(--amber); transform: rotate(6deg); }
+    .stamp-tunnels { border-color: var(--ink); color: var(--ink); transform: rotate(-7deg); }
+    .bulletin-board {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding: 2rem;
+      background: #8b7355;
+      background-image: repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(0,0,0,.03) 4px, rgba(0,0,0,.03) 8px);
+      border: 6px solid #6b5535;
+      box-shadow: inset 0 0 20px rgba(0,0,0,.2), 4px 4px 0 rgba(0,0,0,.15);
+    }
+    .bulletin-board::before {
+      content: "MUNICIPAL BULLETIN BOARD — PUBLIC NOTICES";
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: .3rem 1rem;
+      background: #6b5535;
+      color: var(--paper);
+      font-size: .52rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .notice {
+      position: relative;
+      min-height: 190px;
+      padding: 1.1rem 1rem;
+      background: var(--paper);
+      box-shadow: 2px 3px 6px rgba(0,0,0,.25), inset 0 0 0 1px rgba(0,0,0,.05);
+      transform-origin: top center;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .notice:nth-child(odd) { transform: rotate(-1.5deg); }
+    .notice:nth-child(even) { transform: rotate(1deg); }
+    .notice:nth-child(3n) { transform: rotate(-.5deg); }
+    .notice:hover { z-index: 10; transform: rotate(0deg) scale(1.02); box-shadow: 4px 6px 12px rgba(0,0,0,.3); }
+    .notice::before {
+      content: "●";
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--red);
+      font-size: .95rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,.4);
+    }
+    .notice-type { margin-bottom: .55rem; padding-bottom: .4rem; border-bottom: 1px solid var(--border); color: var(--muted); font-size: .5rem; letter-spacing: .22em; text-transform: uppercase; }
+    .notice-body { color: var(--ink2); font-family: "Special Elite", cursive; font-size: .8rem; line-height: 1.55; }
+    .notice-sig { margin-top: .85rem; color: var(--muted); font-family: "Special Elite", cursive; font-size: .7rem; }
+    .notice.sticky { background: #faf08a; }
+    .notice.urgent { background: #ffd5d5; }
+    .notice.official { background: #d5e8ff; }
+    .episode-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .ep-card {
+      display: block;
+      overflow: hidden;
+      min-width: 0;
+      background: var(--paper);
+      border: 1px solid var(--border2);
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 3px 3px 0 rgba(26,18,8,.08);
+      transition: transform .15s, box-shadow .15s;
+    }
+    .ep-card:hover { transform: translateY(-2px); box-shadow: 5px 5px 0 rgba(26,18,8,.1); }
+    .ep-video { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--ink); }
+    .ep-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .ep-info { padding: .9rem 1rem; }
+    .ep-num { margin-bottom: .3rem; color: var(--muted); font-size: .55rem; letter-spacing: .2em; text-transform: uppercase; }
+    .ep-title { margin-bottom: .4rem; font-family: "Special Elite", cursive; font-size: 1.1rem; }
+    .ep-desc { color: var(--muted); font-size: .68rem; line-height: 1.55; }
+    .ep-link { display: inline-block; margin-top: .6rem; color: var(--red); font-size: .58rem; font-weight: 700; letter-spacing: .15em; text-decoration: none; text-transform: uppercase; }
+    .ep-link:hover { text-decoration: underline; }
+    .report-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .report-card {
+      padding: 1rem;
+      background: var(--paper);
+      border: 1px solid var(--border2);
+      box-shadow: 3px 3px 0 rgba(26,18,8,.08);
+    }
+    .report-card h3 { margin-bottom: .4rem; font-family: "Special Elite", cursive; font-size: 1.1rem; }
+    .report-card p { margin-bottom: .85rem; color: var(--muted); font-size: .72rem; line-height: 1.55; }
+    .report-card a { color: var(--red); font-size: .6rem; font-weight: 700; letter-spacing: .15em; text-decoration: none; text-transform: uppercase; }
+    .report-card a:hover { text-decoration: underline; }
+    .civic-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+      padding: 1.5rem 2rem;
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .footer-disclaimer { max-width: 760px; color: rgba(242,234,216,.52); font-size: .58rem; line-height: 1.7; }
+    .footer-seal { color: rgba(196,123,0,.42); font-family: "Bebas Neue", sans-serif; font-size: .9rem; letter-spacing: .15em; line-height: 1.3; text-align: right; }
+    @media (max-width: 980px) {
+      .civic-nav { display: none; }
+      .hero-inner, .incident-grid, .report-grid { grid-template-columns: 1fr; }
+      .char-grid { grid-template-columns: repeat(2, 1fr); }
+      .bulletin-board { grid-template-columns: 1fr 1fr; }
+      .episode-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .page { padding-inline: 1rem; }
+      .civic-header-top { padding-inline: 1rem; }
+      .alert-bar { padding-inline: 1rem; }
+      .hero-inner { padding: 2rem 1.25rem 1.5rem; }
+      .char-grid, .bulletin-board, .episode-grid { grid-template-columns: 1fr; }
+      .file-meta { grid-template-columns: 1fr; }
+      .civic-title { font-size: 1.05rem; }
+      .civic-subtitle { line-height: 1.45; }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="/">Knight Music X</a>
-    <nav class="nav">
-      <a href="#public-records">Public Records</a>
-      <a href="#persons">Known Persons</a>
-      <a href="#lore">Active Incidents</a>
-      <a href="#broadcasts">Broadcasts</a>
-      <a href="#socials">Report Concern</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero hero-crumby">
-    <div class="wrap crumby-hero-grid">
-      <div class="crumby-hero-copy">
-        <span class="eyebrow municipal-header"><span class="amber-dot"></span>Crumby Island Municipal Portal — Est. Whenever The Dock Stopped Being Safe</span>
-        <h1>Civic Portal</h1>
-        <div class="civic-alert civic-alert-rotator" aria-label="Active municipal advisories">
-          <span>Active Advisory</span>
-          <div class="alert-viewport">
-            <p>⚠ ACTIVE: ChairGate escalation. Seating enforcement at elevated readiness.</p>
-            <p>⚠ NOTICE: Deep fryer missing from Dock 4. Do not approach Daryl.</p>
-            <p>⚠ ADVISORY: Harewood Harold spotted near City Hall. Citizens advised to secure fries.</p>
-            <p>⚠ UPDATE: FryCoin still not legal tender. Crow has been notified.</p>
-          </div>
-        </div>
-        <p class="sub">
-          The official unofficial access point for Crumby Island public records, known persons of interest,
-          municipal broadcasts, wildlife advisories, and fry-related infrastructure notices.
-        </p>
-        <div class="cta-row">
-          <a class="btn primary" href="#public-records">Open Public Records</a>
-          <a class="btn" href="#lore">View Active Incidents</a>
-          <a class="btn" href="#bulletin-board">Bulletin Board</a>
-        </div>
-        <div class="crumby-status" aria-label="Crumby Island status board">
-          <div><span>Portal Status</span><strong>Operational-ish</strong></div>
-          <div><span>Seating Risk</span><strong>Unresolved</strong></div>
-          <div><span>Fry Threat</span><strong>Elevated</strong></div>
-        </div>
-      </div>
-      <div class="crumby-poster">
-        <img src="/images/crumby/crumbyislandttl.png" alt="Crumby Island title art">
-        <div class="quote-block">
-          <p>“This is a dock. Not a rec room.” — B. Melvin, municipal statement</p>
-        </div>
-      </div>
-    </div>
-    <div class="bg-grid" aria-hidden="true"></div>
-  </section>
-
-  <section id="public-records" class="section crumby-chronicles">
-    <div class="wrap">
-      <div class="section-heading">
-        <span class="eyebrow">Flagship Series</span>
-        <h2>Cumberland Chronicles</h2>
-        <p>The original four-episode arc: a greasy mockumentary comedy about dockside fry crime, civic panic, bad plans, and West Coast absurdity.</p>
-      </div>
-      <div class="video-section">
-        <div class="section-heading">
-          <span class="eyebrow">Watch</span>
-          <h2>Cumberland Chronicles Episodes</h2>
-          <p>The four-part Cumberland Chronicles arc is live, plus a PSA from the civic damage-control desk.</p>
-        </div>
-        <div class="video-grid">
-          <article class="video-card video-card-featured">
-            <div class="video-frame">
-              <iframe src="https://www.youtube.com/embed/CIpx9rc_IIc"
-                title="Cumberland Chronicles Episode 1: Fries" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="video-card-body">
-              <span>Ep 1</span>
-              <h3>Fries</h3>
-              <p>The crew fights over bait fries on the dock, one fry hits the water, and Daryl gives the first silent warning.</p>
-              <a href="https://youtu.be/CIpx9rc_IIc" target="_blank" rel="noreferrer">Watch on YouTube</a>
-            </div>
-          </article>
-          <article class="video-card">
-            <div class="video-frame">
-              <iframe src="https://www.youtube.com/embed/OTxvZctX77o"
-                title="Cumberland Chronicles Episode 2: Bullheads" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="video-card-body">
-              <span>Ep 2</span>
-              <h3>Bullheads</h3>
-              <p>One week earlier, the crew is broke, hungry, and staring at the dumb idea that starts the Bullhead Derby scam.</p>
-              <a href="https://youtu.be/OTxvZctX77o" target="_blank" rel="noreferrer">Watch on YouTube</a>
-            </div>
-          </article>
-          <article class="video-card">
-            <div class="video-frame">
-              <iframe src="https://www.youtube.com/embed/Po80ovKD-Ww"
-                title="Cumberland Chronicles Episode 3: Plans" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="video-card-body">
-              <span>Ep 3</span>
-              <h3>Plans</h3>
-              <p>In a trailer garage under a harsh work lamp, the fry pyramid gets explained badly and greenlit anyway.</p>
-              <a href="https://youtu.be/Po80ovKD-Ww" target="_blank" rel="noreferrer">Watch on YouTube</a>
-            </div>
-          </article>
-          <article class="video-card">
-            <div class="video-frame">
-              <iframe src="https://www.youtube.com/embed/X-nkDDxnl78"
-                title="Cumberland Chronicles Episode 4: Derby" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="video-card-body">
-              <span>Ep 4</span>
-              <h3>Derby</h3>
-              <p>The Bullhead Derby collapses into bait theft, a microwave prize, a fry in the water, and total dock failure.</p>
-              <a href="https://youtu.be/X-nkDDxnl78" target="_blank" rel="noreferrer">Watch on YouTube</a>
-            </div>
-          </article>
-          <article class="video-card">
-            <div class="video-frame">
-              <iframe src="https://www.youtube.com/embed/ckhdxGeGVvA"
-                title="Cumberland Chronicles Episode 4.5: PSA" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen loading="lazy"></iframe>
-            </div>
-            <div class="video-card-body">
-              <span>Ep 4.5</span>
-              <h3>PSA</h3>
-              <p>A public-access warning from the part of Crumby trying very hard to pretend this is under control.</p>
-              <a href="https://youtu.be/ckhdxGeGVvA" target="_blank" rel="noreferrer">Watch on YouTube</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <div class="section-heading">
-        <h2>The Island In Three Moves</h2>
-        <p>Start with the Cumberland Chronicles arc, follow Lil’ Cabbage, then let the lore explain why the town feels like it knows something you do not.</p>
-      </div>
-      <div class="feature-grid crumby-entry-grid">
-        <article class="feature-card feature-card-media">
-          <img src="/images/lilcabbageartist.jpeg" alt="Lil’ Cabbage artist image">
-          <h3>Municipal Broadcasts</h3>
-          <p>West Coast country-trap, outlaw humor, heartbreak in the rain, ferry static, and dockside survival anthems.</p>
-          <a href="/artists/lil-cabbage.html">Open Lil’ Cabbage</a>
-        </article>
-        <article class="feature-card feature-card-media">
-          <img src="/images/crumby%20island%20story%20project%202.png" alt="Crumby Island story project artwork">
-          <h3>Public Records</h3>
-          <p>Short-form videos, character scenes, Crumby news energy, and low-budget local mythology.</p>
-          <a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Visit YouTube</a>
-        </article>
-        <article class="feature-card feature-card-media">
-          <img src="/images/crumby/crumbyislandttl.png" alt="Crumby Island title art">
-          <h3>Active Incidents</h3>
-          <p>ChairGate, the Fryspiracy, CAPA statements, rogue wildlife, and civic myths nobody fully understands.</p>
-          <a href="#lore">Read the field guide</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="persons" class="section alt">
-    <div class="wrap">
-      <div class="section-heading">
-        <span class="eyebrow">Known Persons of Interest</span>
-        <h2>Municipal Files</h2>
-        <p>Personnel records, civic warnings, and wildlife-adjacent case notes recovered from the public counter printer.</p>
-      </div>
-      <div class="character-grid">
-        <article class="character-card">
-          <div class="status-stamp">Person of Interest</div>
-          <div class="file-strip"><span>File CI-001</span><strong>Person of Interest</strong></div>
-          <span class="character-role">Human disaster</span>
-          <h3>Lil’ Cabbage</h3>
-          <p>Late-30s island menace in mud-caked denim and a floppy cowboy hat. Always feuding with the city, deeply poetic when mad.</p>
-        </article>
-        <article class="character-card">
-          <div class="status-stamp status-authorized">Authorized</div>
-          <div class="file-strip"><span>File CI-002</span><strong>Authorized</strong></div>
-          <span class="character-role">Bylaw authority</span>
-          <h3>Barb Melvin</h3>
-          <p>Municipal fleece, clipboard grip of death, and zero patience. Mastermind of ChairGate and lead face of Crumby bureaucracy.</p>
-        </article>
-        <article class="character-card">
-          <div class="status-stamp">Monitoring</div>
-          <div class="file-strip"><span>File CI-003</span><strong>Monitoring</strong></div>
-          <span class="character-role">CAPA spokesperson</span>
-          <h3>Ronnie</h3>
-          <p>Nervous, earnest, and trapped in every non-animal crisis. Just wants peace. Will issue a press release for anything.</p>
-        </article>
-        <article class="character-card">
-          <div class="status-stamp">At Large</div>
-          <div class="file-strip"><span>File CI-004</span><strong>At Large</strong></div>
-          <span class="character-role">Fry strategist</span>
-          <h3>Trash Panda</h3>
-          <p>Fast-talking raccoon in a greasy trench coat. Speaks in schemes, bribes with wet fries, and may be blueprinting fry tunnels.</p>
-        </article>
-        <article class="character-card">
-          <div class="status-stamp">Uncooperative</div>
-          <div class="file-strip"><span>File CI-005</span><strong>Uncooperative</strong></div>
-          <span class="character-role">Conspiracy operator</span>
-          <h3>Crow Gravyraven</h3>
-          <p>Cracked leather jacket, silver chain, and a fry conspiracy board. Yells about FryCoin and thinks he is two steps ahead.</p>
-        </article>
-        <article class="character-card">
-          <div class="status-stamp">Under Surveillance</div>
-          <div class="file-strip"><span>File CI-006</span><strong>Under Surveillance</strong></div>
-          <span class="character-role">Fry thief</span>
-          <h3>Daryl the Orca</h3>
-          <p>Bucket-holding orca in aviators. Shows up in waters he has no business being in. Possibly part of a deep-fryer conspiracy.</p>
-        </article>
-        <article class="character-card">
-          <div class="status-stamp">Ungovernable</div>
-          <div class="file-strip"><span>File CI-007</span><strong>Ungovernable</strong></div>
-          <span class="character-role">Rap beef hazard</span>
-          <h3>Shithawk</h3>
-          <p>Dog-sized seagull with greasy feathers and wild yellow eyes. Loud, feral, camera-biting, and legally ungovernable.</p>
-        </article>
-        <article class="character-card">
-          <div class="status-stamp">Hostile</div>
-          <div class="file-strip"><span>File CI-008</span><strong>Hostile</strong></div>
-          <span class="character-role">Territorial threat</span>
-          <h3>Harewood Harold</h3>
-          <p>Menacing oversized peacock with grease-stained tail feathers. Believed to be in league with Daryl and known to hoard fries.</p>
-        </article>
-        <article class="character-card">
-          <div class="status-stamp">Observed</div>
-          <div class="file-strip"><span>File CI-009</span><strong>Observed</strong></div>
-          <span class="character-role">Silent menace</span>
-          <h3>Buddy Bear</h3>
-          <p>Giant quiet bear seen dragging deep fryers into the woods. Possibly cooking. Always watching. Never speaking.</p>
-        </article>
-        <article class="character-card">
-          <div class="status-stamp">Deployed</div>
-          <div class="file-strip"><span>File CI-010</span><strong>Deployed</strong></div>
-          <span class="character-role">Municipal escalation</span>
-          <h3>Chair SWAT</h3>
-          <p>Overfunded seating enforcement with tactical vests, Allen keys, and ominous Bluetooth speaker energy.</p>
-        </article>
-        <article class="character-card">
-          <div class="status-stamp">Below Grade</div>
-          <div class="file-strip"><span>File CI-011</span><strong>Below Grade</strong></div>
-          <span class="character-role">Tunnel network</span>
-          <h3>Skidmark the Rat</h3>
-          <p>Greasy rat with a zip-tie bandolier. Lives in storm drains, maps the tunnels, and works faster than anyone admits.</p>
-        </article>
-        <article class="character-card">
-          <div class="status-stamp">Mobile</div>
-          <div class="file-strip"><span>File CI-012</span><strong>Mobile</strong></div>
-          <span class="character-role">Backroad muscle</span>
-          <h3>The Coyote Crew</h3>
-          <p>Leather-vested coyotes on tiny bikes. Enforcers for Harold and Daryl’s syndicate. Bad news in formation.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="lore" class="section crumby-field-guide">
-    <div class="wrap">
-      <div class="section-heading">
-        <span class="eyebrow">Active Incidents</span>
-        <h2>Incident Reports</h2>
-        <p>Crumby Island runs on recurring crises: civic pressure, fry economics, rogue wildlife, and warnings nobody takes seriously until the dock gets closed.</p>
-      </div>
-      <div class="lore-card-grid">
-        <article class="lore-card">
-          <span class="incident-file-no">Incident File #0001</span>
-          <h3>ChairGate</h3>
-          <div class="incident-meta">
-            <p><strong>Filed by:</strong> B. Melvin, Bylaw Enforcement</p>
-            <p><strong>Status:</strong> <em>● Ongoing</em></p>
-            <p><strong>Threat Level:</strong> Civic</p>
-            <p><strong>Last updated:</strong> Following the third sit-in this month.</p>
-          </div>
-          <p>Lil’ Cabbage’s beloved chair was confiscated under Bylaw 7-14(b): Unsanctioned Seating. What followed: poetry threats, a sit-in, two CAPA press releases, and an emergency chair audit. The chair has not been returned.</p>
-          <details class="incident-full-file">
-            <summary>Read Full File ›</summary>
-            <p>Additional notes indicate the chair may possess heritage butt-groove value. This claim is not currently recognized by Crumby bylaw.</p>
-          </details>
-        </article>
-        <article class="lore-card">
-          <span class="incident-file-no">Incident File #0002</span>
-          <h3>The Fryspiracy</h3>
-          <div class="incident-meta">
-            <p><strong>Filed by:</strong> R. Ronnie, CAPA Spokesperson</p>
-            <p><strong>Status:</strong> <em>● Escalating</em></p>
-            <p><strong>Threat Level:</strong> Greaseborne</p>
-            <p><strong>Last updated:</strong> After the deep fryer went missing from Dock 4.</p>
-          </div>
-          <p>Deep fryers are disappearing across the island. Daryl is involved. So are peacocks, coyotes, and probably somebody at City Hall, although City Hall has declined to confirm the existence of City Hall.</p>
-          <details class="incident-full-file">
-            <summary>Read Full File ›</summary>
-            <p>Witnesses report wet footprints, fryer baskets, and one suspicious bucket. CAPA recommends avoiding eye contact with any orca wearing aviators.</p>
-          </details>
-        </article>
-        <article class="lore-card">
-          <span class="incident-file-no">Incident File #0003</span>
-          <h3>Crumby vs. Zoo Crew</h3>
-          <div class="incident-meta">
-            <p><strong>Filed by:</strong> CAPA Front Desk</p>
-            <p><strong>Status:</strong> <em>● Unresolved</em></p>
-            <p><strong>Threat Level:</strong> Wildlife Civic</p>
-            <p><strong>Last updated:</strong> When the coyotes arrived on tiny bikes.</p>
-          </div>
-          <p>The animals are uniting, the city is panicking, and a turf war is brewing with burnt oil in the air. Harewood Harold remains unhelpful and visually expensive.</p>
-          <details class="incident-full-file">
-            <summary>Read Full File ›</summary>
-            <p>Unverified reports connect Harold, Daryl, and the Coyote Crew through a diagram currently labelled “Fry-angle” in marker.</p>
-          </details>
-        </article>
-        <article class="lore-card">
-          <span class="incident-file-no">Incident File #0004</span>
-          <h3>Chair Amnesty Week</h3>
-          <div class="incident-meta">
-            <p><strong>Filed by:</strong> Public Works Seating Desk</p>
-            <p><strong>Status:</strong> <em>● Under Review</em></p>
-            <p><strong>Threat Level:</strong> Administrative</p>
-            <p><strong>Last updated:</strong> After Barb said “no questions asked” and asked six questions.</p>
-          </div>
-          <p>Barb calls it de-escalation. Cabbage calls it war. Residents may return unauthorized chairs during posted hours, provided the chair does not appear emotionally historic.</p>
-          <details class="incident-full-file">
-            <summary>Read Full File ›</summary>
-            <p>The amnesty table collapsed after three folding chairs, one lawn recliner, and a stool nobody wanted to claim.</p>
-          </details>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="bulletin-board" class="section alt civic-board-section">
-    <div class="wrap">
-      <div class="section-heading">
-        <span class="eyebrow">Municipal Bulletin Board</span>
-        <h2>Posted Notices</h2>
-        <p>Community notices are provided for public awareness and should not be interpreted as legal advice, ferry advice, or fry advice.</p>
-      </div>
-      <div class="bulletin-grid">
-        <article class="bulletin-note"><strong>Lost</strong><p>1 deep fryer. Reward: 3 wet fries. Contact: nobody at City Hall will help.</p><span>Facilities</span></article>
-        <article class="bulletin-note"><strong>For Sale</strong><p>Fry futures. Ask Crow. FryCoin accepted. Cash preferred.</p><span>Classified</span></article>
-        <article class="bulletin-note"><strong>Bylaw Notice</strong><p>Unsanctioned seating remains a violation. — B. Melvin</p><span>Bylaw</span></article>
-        <article class="bulletin-note"><strong>Found</strong><p>One bucket. Smells like orca. Not claimed.</p><span>Lost + Found</span></article>
-        <article class="bulletin-note"><strong>Wanted</strong><p>Whoever took the microwave from the Derby prize table.</p><span>Public Records</span></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="broadcasts" class="section alt">
-    <div class="wrap">
-      <div class="crumby-broadcast">
+  <header class="civic-header">
+    <div class="civic-header-top">
+      <div class="civic-seal">
+        <div class="seal-circle">CRUMBY<br>ISLAND<br>CIVIC</div>
         <div>
-          <span class="eyebrow">Current Signal</span>
-          <h2>Music + Video</h2>
-          <p>
-            Crumby Island is not just a page. Songs, visuals, and character bits all feed the same project.
-            Lil’ Cabbage is the loudest signal, but the island keeps mutating through scenes, clips, and local mythology.
-          </p>
-        </div>
-        <div class="broadcast-card">
-          <span>Now transmitting</span>
-          <strong>Lil’ Cabbage X</strong>
-          <a class="btn primary" href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Watch the channel</a>
+          <div class="civic-title">Crumby Island Municipal Portal</div>
+          <div class="civic-subtitle">Official Public-Access Civic Website — Est. Whenever The Dock Stopped Being Safe</div>
         </div>
       </div>
+      <ul class="civic-nav">
+        <li><a href="/">KMX Home</a></li>
+        <li><a href="#incidents">Active Incidents</a></li>
+        <li><a href="#characters">Known Persons</a></li>
+        <li><a href="#bulletin">Public Notices</a></li>
+        <li><a href="#broadcasts">Broadcasts</a></li>
+        <li><a href="#report">Report a Concern</a></li>
+      </ul>
     </div>
-  </section>
-
-  <section id="socials" class="section">
-    <div class="wrap">
-      <h2>Follow Crumby Island</h2>
-      <div class="social-grid">
-        <article class="social-card">
-          <h3>YouTube</h3>
-          <p>Music videos, scenes, lore fragments, and public-access-grade town panic.</p>
-          <a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Visit YouTube →</a>
-        </article>
-        <article class="social-card">
-          <h3>TikTok</h3>
-          <p>Short-form Crumby energy, hooks, bits, and weird local prophecy in vertical form.</p>
-          <a href="https://www.tiktok.com/@lilcabbagex?lang=en" target="_blank" rel="noreferrer">Visit TikTok →</a>
-        </article>
-        <article class="social-card">
-          <h3>Instagram</h3>
-          <p>Character visuals, project updates, and whatever survived the ferry ride.</p>
-          <a href="https://www.instagram.com/lil_cabbage982/?hl=en" target="_blank" rel="noreferrer">Visit Instagram →</a>
-        </article>
-        <article class="social-card">
-          <h3>Facebook</h3>
-          <p>Updates for anyone who still likes a town square with a little static in it.</p>
-          <a href="https://www.facebook.com/Cabbagepatchtrap" target="_blank" rel="noreferrer">Visit Facebook →</a>
-        </article>
+    <div class="alert-bar">
+      <div class="alert-prefix"><div class="alert-blink"></div>Civic Advisory</div>
+      <div class="alert-track">
+        <div class="alert-inner">
+          <span class="alert-item">⚠ ACTIVE: ChairGate escalation in progress. Seating enforcement at elevated readiness. Citizens advised to remain standing.</span>
+          <span class="alert-item">⚠ NOTICE: Deep fryer missing from Dock 4. Do not approach Daryl. Do not acknowledge the bucket.</span>
+          <span class="alert-item">⚠ ADVISORY: Harewood Harold spotted near City Hall. Citizens advised to secure fries immediately.</span>
+          <span class="alert-item">⚠ UPDATE: FryCoin is still not legal tender on Crumby Island. Crow has been notified. Crow disagrees.</span>
+          <span class="alert-item">⚠ REMINDER: Chair Amnesty Week ends Friday. Barb will not be extending it. This is final.</span>
+          <span class="alert-item">⚠ INCIDENT: Coyote Crew sighted near Dock 3. Do not engage. Leave fries.</span>
+          <span class="alert-item">⚠ ACTIVE: ChairGate escalation in progress. Seating enforcement at elevated readiness. Citizens advised to remain standing.</span>
+          <span class="alert-item">⚠ NOTICE: Deep fryer missing from Dock 4. Do not approach Daryl. Do not acknowledge the bucket.</span>
+          <span class="alert-item">⚠ ADVISORY: Harewood Harold spotted near City Hall. Citizens advised to secure fries immediately.</span>
+          <span class="alert-item">⚠ UPDATE: FryCoin is still not legal tender on Crumby Island. Crow has been notified. Crow disagrees.</span>
+          <span class="alert-item">⚠ REMINDER: Chair Amnesty Week ends Friday. Barb will not be extending it. This is final.</span>
+          <span class="alert-item">⚠ INCIDENT: Coyote Crew sighted near Dock 3. Do not engage. Leave fries.</span>
+        </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section id="contact-links" class="section alt">
-    <div class="wrap">
-      <h2>Quick Links</h2>
-      <div class="cta-row">
-        <a class="btn primary" href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">YouTube</a>
-        <a class="btn" href="https://www.tiktok.com/@lilcabbagex?lang=en" target="_blank" rel="noreferrer">TikTok</a>
-        <a class="btn" href="https://www.instagram.com/lil_cabbage982/?hl=en" target="_blank" rel="noreferrer">Instagram</a>
-        <a class="btn" href="https://www.facebook.com/Cabbagepatchtrap" target="_blank" rel="noreferrer">Facebook</a>
+  <main class="page">
+    <section class="hero-doc">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-doc-label">Official Civic Record — Public Access Grade</div>
+          <h1 class="hero-title">Crumby<br><em>Island</em></h1>
+          <p class="hero-tagline">The island started as a dock argument about fries and escalated into a civic emergency nobody has fully explained. Cumberland Chronicles documented it. CAPA issued press releases. Nobody listened.</p>
+          <div class="hero-btns">
+            <a href="#broadcasts" class="btn btn-civic">Watch the Episodes</a>
+            <a href="#incidents" class="btn btn-red">Active Incidents</a>
+            <a href="#bulletin" class="btn btn-amber">Public Notices</a>
+          </div>
+        </div>
+        <aside class="status-panel" aria-label="Island status current">
+          <div class="status-panel-title">// Island Status — Current</div>
+          <div class="status-row"><div class="status-key">Overall Situation</div><div class="status-val">Manageable (Barely)</div><span class="status-badge badge-amber">Elevated Civic Risk</span></div>
+          <div class="status-row"><div class="status-key">ChairGate</div><div class="status-val">Ongoing — Day 47</div><span class="status-badge badge-red">Unresolved</span></div>
+          <div class="status-row"><div class="status-key">Fry Infrastructure</div><div class="status-val">Compromised</div><span class="status-badge badge-red">Under Investigation</span></div>
+          <div class="status-row"><div class="status-key">Daryl (The Orca)</div><div class="status-val">At large. Has bucket.</div><span class="status-badge badge-amber">Under Surveillance</span></div>
+          <div class="status-row"><div class="status-key">CAPA Response</div><div class="status-val">Press release drafted</div><span class="status-badge badge-green">Technically Active</span></div>
+          <div class="status-row"><div class="status-key">FryCoin</div><div class="status-val">Still not legal</div><span class="status-badge badge-red">Unrecognized Currency</span></div>
+        </aside>
       </div>
+    </section>
+
+    <section id="incidents">
+      <div class="sec-head"><div class="sec-num">01</div><div><div class="sec-eyebrow">// Department of Civic Incidents</div><h2 class="sec-title">Active Incident Files</h2></div></div>
+      <div class="incident-grid">
+        <article class="incident-file">
+          <div class="file-header"><span class="file-number">Incident File #0001</span><div class="file-status-dot dot-red"></div></div>
+          <div class="file-body">
+            <div class="file-classification">Classification: Civic / Seating</div>
+            <div class="file-title">ChairGate</div>
+            <div class="file-meta">
+              <div><div class="fmk">Filed by</div><div class="fmv">B. Melvin, Bylaw Enforcement</div></div>
+              <div><div class="fmk">Status</div><div class="fmv" style="color:var(--red)">● Ongoing</div></div>
+              <div><div class="fmk">Last Updated</div><div class="fmv">After the third sit-in</div></div>
+              <div><div class="fmk">Threat Level</div><div class="fmv">Civic</div></div>
+            </div>
+            <div class="file-desc">Lil' Cabbage's beloved chair was confiscated under Bylaw 7-14(b): Unsanctioned Seating in a <span class="redacted">designated standing zone</span>. What followed: three sit-ins, two poetry threats, one CAPA press release, and an emergency chair audit. The chair has not been returned. Barb says it is in <span class="redacted">storage</span>. Cabbage says it is war.</div>
+          </div>
+          <div class="file-footer"><a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Read Full File ›</a><span class="file-threat badge-red">Threat: Civic</span></div>
+        </article>
+        <article class="incident-file">
+          <div class="file-header"><span class="file-number">Incident File #0002</span><div class="file-status-dot dot-red"></div></div>
+          <div class="file-body">
+            <div class="file-classification">Classification: Economic / Wildlife</div>
+            <div class="file-title">The Fryspiracy</div>
+            <div class="file-meta">
+              <div><div class="fmk">Filed by</div><div class="fmv">Ronnie, CAPA Spokesperson</div></div>
+              <div><div class="fmk">Status</div><div class="fmv" style="color:var(--red)">● Escalating</div></div>
+              <div><div class="fmk">Last Updated</div><div class="fmv">Dock 4 fryer missing</div></div>
+              <div><div class="fmk">Suspects</div><div class="fmv">Daryl, Harold, <span class="redacted">City Hall???</span></div></div>
+            </div>
+            <div class="file-desc">Deep fryers are disappearing across the island. Three confirmed missing. Daryl was seen near Dock 4 with a suspicious-sized bucket. Harewood Harold has grease on his tail feathers. Crow Gravyraven claims this proves his FryCoin theory. CAPA has not confirmed a connection. <span class="redacted">CAPA is scared.</span></div>
+          </div>
+          <div class="file-footer"><a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Read Full File ›</a><span class="file-threat badge-red">Threat: Economic</span></div>
+        </article>
+        <article class="incident-file">
+          <div class="file-header"><span class="file-number">Incident File #0003</span><div class="file-status-dot dot-amber"></div></div>
+          <div class="file-body">
+            <div class="file-classification">Classification: Wildlife / Territorial</div>
+            <div class="file-title">Crumby vs. Zoo Crew</div>
+            <div class="file-meta">
+              <div><div class="fmk">Filed by</div><div class="fmv">Ronnie (reluctantly)</div></div>
+              <div><div class="fmk">Status</div><div class="fmv" style="color:var(--amber)">● Brewing</div></div>
+              <div><div class="fmk">Last Updated</div><div class="fmv">Coyotes spotted in formation</div></div>
+              <div><div class="fmk">Key Parties</div><div class="fmv">Harold, Daryl, Coyote Crew</div></div>
+            </div>
+            <div class="file-desc">The animals are coordinating. Harewood Harold and Daryl appear to be operating a <span class="redacted">syndicate</span>. The Coyote Crew provides muscle. Buddy Bear is dragging infrastructure into the woods. The city is panicking. A turf war is forming. Burnt oil is in the air. Shithawk is camera-biting again.</div>
+          </div>
+          <div class="file-footer"><a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Read Full File ›</a><span class="file-threat badge-amber">Threat: Territorial</span></div>
+        </article>
+        <article class="incident-file">
+          <div class="file-header"><span class="file-number">Incident File #0004</span><div class="file-status-dot dot-amber"></div></div>
+          <div class="file-body">
+            <div class="file-classification">Classification: Civic / De-escalation (Failed)</div>
+            <div class="file-title">Chair Amnesty Week</div>
+            <div class="file-meta">
+              <div><div class="fmk">Filed by</div><div class="fmv">B. Melvin (Bylaw)</div></div>
+              <div><div class="fmk">Status</div><div class="fmv" style="color:var(--amber)">● Contested</div></div>
+              <div><div class="fmk">Barb's Position</div><div class="fmv">De-escalation</div></div>
+              <div><div class="fmk">Cabbage's Position</div><div class="fmv">Declaration of war</div></div>
+            </div>
+            <div class="file-desc">Barb offered Chair Amnesty Week as a gesture of civic goodwill. Residents could surrender unlicensed seating without penalty. Lil' Cabbage interpreted this as a <span class="redacted">psychological operation</span> and issued a counter-offer involving twelve chairs and a poem. Nobody surrendered anything. The amnesty ended Friday. Barb extended it. She said she didn't.</div>
+          </div>
+          <div class="file-footer"><a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Read Full File ›</a><span class="file-threat badge-amber">Threat: Political</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="characters">
+      <div class="sec-head"><div class="sec-num">02</div><div><div class="sec-eyebrow">// Known Persons of Interest — Active Registry</div><h2 class="sec-title">Personnel Files</h2></div></div>
+      <div class="char-grid">
+        <article class="char-card"><div class="char-stamp stamp-person">Person of<br>Interest</div><div class="char-img-wrap"><img src="/images/lilcabbageartist.jpeg" alt="Lil' Cabbage"></div><div class="char-role">Human Disaster</div><div class="char-name">Lil' Cabbage</div><p class="char-desc">Late-30s island menace. Mud-caked denim, floppy cowboy hat. Always feuding with the city. Deeply poetic when mad.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-authorized">Authorized</div><div class="char-img-wrap"><div class="char-img-placeholder">BM</div></div><div class="char-role">Bylaw Authority</div><div class="char-name">Barb Melvin</div><p class="char-desc">Municipal fleece, clipboard grip of death, zero patience. Mastermind of ChairGate.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-deployed" style="font-size:.48rem">Under Duress</div><div class="char-img-wrap"><div class="char-img-placeholder">R</div></div><div class="char-role">CAPA Spokesperson</div><div class="char-name">Ronnie</div><p class="char-desc">Nervous, earnest, trapped. Just wants peace. Will issue a press release for anything.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-atlarge">At Large</div><div class="char-img-wrap"><div class="char-img-placeholder">TP</div></div><div class="char-role">Fry Strategist</div><div class="char-name">Trash Panda</div><p class="char-desc">Fast-talking raccoon in a greasy trench coat. Speaks in schemes. May be blueprinting fry tunnels.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-uncooperative">Uncooperative</div><div class="char-img-wrap"><div class="char-img-placeholder">CG</div></div><div class="char-role">Conspiracy Operator</div><div class="char-name">Crow Gravyraven</div><p class="char-desc">Cracked jacket, fry conspiracy board. Yells about FryCoin. Thinks he's two steps ahead.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-surveillance">Under<br>Surveillance</div><div class="char-img-wrap"><div class="char-img-placeholder">DO</div></div><div class="char-role">Fry Thief</div><div class="char-name">Daryl the Orca</div><p class="char-desc">Bucket-holding orca in aviators. Shows up in waters he has no business being in. Denies everything.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-atlarge">Ungovernable</div><div class="char-img-wrap"><div class="char-img-placeholder">SH</div></div><div class="char-role">Rap Beef Hazard</div><div class="char-name">Shithawk</div><p class="char-desc">Dog-sized seagull, greasy feathers. Loud, feral, camera-biting. Legally ungovernable.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-atlarge">Hostile</div><div class="char-img-wrap"><div class="char-img-placeholder">HH</div></div><div class="char-role">Territorial Threat</div><div class="char-name">Harewood Harold</div><p class="char-desc">Oversized peacock. Grease-stained tail feathers. Believed to be in league with Daryl.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-unknown">Whereabouts<br>Unknown</div><div class="char-img-wrap"><div class="char-img-placeholder">BB</div></div><div class="char-role">Silent Menace</div><div class="char-name">Buddy Bear</div><p class="char-desc">Seen dragging deep fryers into the woods. Possibly cooking. Always watching. Never speaking.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-deployed">Deployed</div><div class="char-img-wrap"><div class="char-img-placeholder">CS</div></div><div class="char-role">Municipal Escalation</div><div class="char-name">Chair SWAT</div><p class="char-desc">Tactical vests, Allen keys, ominous Bluetooth speaker energy. Overfunded. Always ready.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-tunnels">In The<br>Tunnels</div><div class="char-img-wrap"><div class="char-img-placeholder">SR</div></div><div class="char-role">Tunnel Network</div><div class="char-name">Skidmark the Rat</div><p class="char-desc">Storm-drain operator. Zip-tie bandolier. Maps tunnels nobody admits exist.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-atlarge">Mobile</div><div class="char-img-wrap"><div class="char-img-placeholder">CC</div></div><div class="char-role">Backroad Muscle</div><div class="char-name">The Coyote Crew</div><p class="char-desc">Leather-vested coyotes on tiny bikes. Enforcers for Harold and Daryl's syndicate.</p></article>
+      </div>
+    </section>
+
+    <section id="bulletin">
+      <div class="sec-head"><div class="sec-num">03</div><div><div class="sec-eyebrow">// Public Notices — Community Board</div><h2 class="sec-title">Municipal Bulletin Board</h2></div></div>
+      <div class="bulletin-board">
+        <article class="notice urgent"><div class="notice-type">Lost & Found</div><div class="notice-body"><strong>LOST:</strong> One (1) deep fryer. Last seen near Dock 4 Tuesday evening. Slightly greasy. Answers to nothing. Do not approach Daryl. Reward: 3 wet fries.</div><div class="notice-sig">— Nobody at City Hall will help</div></article>
+        <article class="notice sticky"><div class="notice-type">For Sale</div><div class="notice-body"><strong>FRY FUTURES</strong> — Limited supply. Strong returns projected (by me). FryCoin accepted. Cash preferred. Serious inquiries only. Ask for Crow. Do not tell Barb.</div><div class="notice-sig">— C. Gravyraven</div></article>
+        <article class="notice official"><div class="notice-type">Bylaw Notice</div><div class="notice-body"><strong>BYLAW 7-14(b) REMINDER:</strong> Unsanctioned seating remains a violation regardless of chair sentimental value, poetry output, or how long you've had it. Chair Amnesty Week has ended.</div><div class="notice-sig">— B. Melvin, Bylaw Enforcement</div></article>
+        <article class="notice"><div class="notice-type">Found</div><div class="notice-body"><strong>FOUND:</strong> One (1) bucket. Smells like orca. Found at Dock 4 Thursday morning. Not claimed. Not going near it. Someone else deal with this.</div><div class="notice-sig">— Anonymous</div></article>
+        <article class="notice urgent"><div class="notice-type">Wanted</div><div class="notice-body"><strong>WANTED:</strong> Whoever took the microwave from the Derby prize table. It was the prize. It was also the only microwave. The situation is as bad as it sounds.</div><div class="notice-sig">— Bullhead Derby Committee (disbanded)</div></article>
+        <article class="notice sticky"><div class="notice-type">Community Notice</div><div class="notice-body"><strong>REMINDER:</strong> The storm drain near Dock 2 is not a business address. Do not leave packages for Skidmark. Do not knock. Do not ask about the tunnels.</div><div class="notice-sig">— Public Works (what's left of it)</div></article>
+      </div>
+    </section>
+
+    <section id="broadcasts">
+      <div class="sec-head"><div class="sec-num">04</div><div><div class="sec-eyebrow">// Cumberland Chronicles — Official Record</div><h2 class="sec-title">Civic Broadcast Archive</h2></div></div>
+      <div class="episode-grid">
+        <article class="ep-card"><div class="ep-video"><iframe src="https://www.youtube.com/embed/CIpx9rc_IIc" title="Cumberland Chronicles Episode 1: Fries" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="ep-info"><div class="ep-num">Episode 01 — Cumberland Chronicles</div><div class="ep-title">Fries</div><p class="ep-desc">The crew fights over bait fries on the dock. One fry hits the water. Daryl gives the first silent warning.</p><a href="https://youtu.be/CIpx9rc_IIc" class="ep-link" target="_blank" rel="noreferrer">Watch on YouTube ›</a></div></article>
+        <article class="ep-card"><div class="ep-video"><iframe src="https://www.youtube.com/embed/OTxvZctX77o" title="Cumberland Chronicles Episode 2: Bullheads" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="ep-info"><div class="ep-num">Episode 02 — Cumberland Chronicles</div><div class="ep-title">Bullheads</div><p class="ep-desc">The crew is broke, hungry, and staring at the dumb idea that starts the Bullhead Derby scam.</p><a href="https://youtu.be/OTxvZctX77o" class="ep-link" target="_blank" rel="noreferrer">Watch on YouTube ›</a></div></article>
+        <article class="ep-card"><div class="ep-video"><iframe src="https://www.youtube.com/embed/Po80ovKD-Ww" title="Cumberland Chronicles Episode 3: Plans" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="ep-info"><div class="ep-num">Episode 03 — Cumberland Chronicles</div><div class="ep-title">Plans</div><p class="ep-desc">In a trailer garage under a harsh work lamp, the fry pyramid gets explained badly and greenlit anyway.</p><a href="https://youtu.be/Po80ovKD-Ww" class="ep-link" target="_blank" rel="noreferrer">Watch on YouTube ›</a></div></article>
+        <article class="ep-card"><div class="ep-video"><iframe src="https://www.youtube.com/embed/X-nkDDxnl78" title="Cumberland Chronicles Episode 4: Derby" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="ep-info"><div class="ep-num">Episode 04 — Cumberland Chronicles</div><div class="ep-title">Derby</div><p class="ep-desc">The Bullhead Derby collapses into bait theft, a microwave prize, a fry in the water, and total dock failure.</p><a href="https://youtu.be/X-nkDDxnl78" class="ep-link" target="_blank" rel="noreferrer">Watch on YouTube ›</a></div></article>
+        <article class="ep-card"><div class="ep-video"><iframe src="https://www.youtube.com/embed/ckhdxGeGVvA" title="Cumberland Chronicles Episode 4.5: PSA" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="ep-info"><div class="ep-num">Episode 04.5 — PSA</div><div class="ep-title">PSA</div><p class="ep-desc">A public-access warning from the part of Crumby trying very hard to pretend this is under control.</p><a href="https://youtu.be/ckhdxGeGVvA" class="ep-link" target="_blank" rel="noreferrer">Watch on YouTube ›</a></div></article>
+        <article class="ep-card" style="background:var(--paper2);display:flex;align-items:center;justify-content:center;min-height:200px;"><div style="text-align:center;padding:2rem;"><div style="font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem">// Next Transmission</div><div style="font-family:'Special Elite',cursive;font-size:1.2rem;margin-bottom:.5rem">More episodes incoming</div><div style="font-size:.68rem;color:var(--muted);line-height:1.6">The island is still happening.<br>Follow the channel for updates.</div><a href="https://www.youtube.com/@Lil_Cabbage_X" class="btn btn-civic" style="margin-top:1rem;display:inline-flex" target="_blank" rel="noreferrer">Subscribe →</a></div></article>
+      </div>
+    </section>
+
+    <section id="report">
+      <div class="sec-head"><div class="sec-num">05</div><div><div class="sec-eyebrow">// Report a Concern — Reduced Staff</div><h2 class="sec-title">Public Counter Links</h2></div></div>
+      <div class="report-grid">
+        <article class="report-card"><h3>YouTube Records Desk</h3><p>Music videos, scenes, lore fragments, and public-access-grade town panic.</p><a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Visit YouTube →</a></article>
+        <article class="report-card"><h3>TikTok Notice Window</h3><p>Short-form Crumby energy, hooks, bits, and weird local prophecy in vertical form.</p><a href="https://www.tiktok.com/@lilcabbagex?lang=en" target="_blank" rel="noreferrer">Visit TikTok →</a></article>
+        <article class="report-card"><h3>Instagram Evidence Locker</h3><p>Character visuals, project updates, and whatever survived the ferry ride.</p><a href="https://www.instagram.com/lil_cabbage982/?hl=en" target="_blank" rel="noreferrer">Visit Instagram →</a></article>
+        <article class="report-card"><h3>Facebook Town Square</h3><p>Updates for anyone who still likes a town square with a little static in it.</p><a href="https://www.facebook.com/Cabbagepatchtrap" target="_blank" rel="noreferrer">Visit Facebook →</a></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="civic-footer">
+    <div class="footer-disclaimer">
+      Crumby Island Municipal Portal is not affiliated with any recognized governing authority or licensed municipal body. CAPA accepts no responsibility for fry-related infrastructure damage, wildlife-syndicate activity, or the ongoing FryCoin situation. Daryl denies everything. FryCoin is not legal tender. Chair Amnesty Week has ended and will not be extended again. This site is maintained by Crumby Island Civic Administration (reduced staff, one printer, no fax).
     </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <p>Crumby Island Municipal Portal is not affiliated with any recognized governing authority. CAPA accepts no responsibility for fry-related infrastructure damage. Daryl denies everything.</p>
-  </div>
-</footer>
-
-<script src="/assets/js/main.js"></script>
+    <div class="footer-seal">CRUMBY<br>ISLAND<br>CIVIC<br>PORTAL</div>
+  </footer>
+  <script>
+    document.querySelectorAll('.redacted').forEach((el) => {
+      el.title = 'hover to reveal';
+    });
+  </script>
 </body>
 </html>
