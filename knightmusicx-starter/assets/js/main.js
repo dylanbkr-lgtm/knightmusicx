@@ -190,7 +190,8 @@ if (quiz) {
   function showResult() {
     const winner = Object.entries(scores).sort((a, b) => b[1] - a[1])[0]?.[0] || 'lil-cabbage';
     currentResult = artists[winner];
-    const text = `KMX assigned me ${currentResult.name}. Apparently I'm ${currentResult.prompt}. https://www.knightmusicx.com/#signal-quiz`;
+    const article = /^[aeiou]/i.test(currentResult.prompt) ? 'an' : 'a';
+    const text = `KMX assigned me ${currentResult.name}. Apparently I'm ${article} ${currentResult.prompt}. knightmusicx.com/#signal-quiz`;
     questions.forEach((question) => question.classList.remove('active'));
     if (stepLabel) stepLabel.textContent = 'Signal locked';
     if (progressBar) progressBar.style.width = '100%';
@@ -231,7 +232,8 @@ if (quiz) {
 
   quiz.querySelector('[data-quiz-share]')?.addEventListener('click', async () => {
     if (!currentResult) return;
-    const text = shareText?.value || `KMX assigned me ${currentResult.name}. Apparently I'm ${currentResult.prompt}. https://www.knightmusicx.com/#signal-quiz`;
+    const article = /^[aeiou]/i.test(currentResult.prompt) ? 'an' : 'a';
+    const text = shareText?.value || `KMX assigned me ${currentResult.name}. Apparently I'm ${article} ${currentResult.prompt}. knightmusicx.com/#signal-quiz`;
     try {
       await navigator.clipboard.writeText(text);
       if (shareStatus) shareStatus.textContent = 'Copied signal text.';
