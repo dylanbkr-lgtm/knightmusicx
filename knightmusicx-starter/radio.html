@@ -3,13 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Knight Music X Radio</title>
-  <meta name="description" content="Knight Music X Radio: Coastal Static Radio Show, playlist signals, Crumby Island transmissions, and artist channels.">
-  <meta property="og:title" content="Knight Music X Radio">
-  <meta property="og:description" content="Tune into the Knight Music X broadcast desk.">
+  <title>Knight Music X Radio | Independent AI Music Broadcasts</title>
+  <meta name="description" content="Knight Music X Radio collects independent AI music label broadcasts, Coastal Static episodes, Crumby Island transmissions, artist playlists, and weird coastal channel drift.">
+  <link rel="canonical" href="https://knightmusicx.com/radio.html">
+  <link rel="alternate" hreflang="en" href="https://knightmusicx.com/radio.html">
+  <link rel="alternate" hreflang="x-default" href="https://knightmusicx.com/radio.html">
+  <meta property="og:title" content="Knight Music X Radio | AI Music Label Broadcasts">
+  <meta property="og:description" content="Tune into the Knight Music X broadcast desk for independent music, artist channels, and Crumby Island signals.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://knightmusicx.com/radio.html">
   <meta property="og:image" content="/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0b0c0f">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/assets/css/style.css?v=kmx-2026-05-21">
 </head>
 <body>
@@ -21,6 +28,7 @@
       <a href="/#artists">Artists</a>
       <a href="/radio.html">Radio</a>
       <a href="/crumby-island.html">Crumby Island</a>
+      <a href="/merch.html">Merch</a>
       <a href="/#contact">Contact</a>
     </nav>
   </div>
@@ -88,7 +96,10 @@
         </div>
       </div>
       <article class="radio-show-card">
-        <img class="radio-show-art" src="/images/coastal%20static%20image.png" alt="Coastal Static Radio Show artwork">
+        <picture>
+          <source srcset="/images/coastal%20static%20image.webp" type="image/webp">
+          <img class="radio-show-art" src="/images/coastal%20static%20image.png" alt="Coastal Static Radio Show artwork" loading="lazy" decoding="async">
+        </picture>
         <div>
           <span>Episode 1</span>
           <h3>Coastal Static Radio Show</h3>
@@ -202,36 +213,42 @@
         </article>
         <article class="radio-channel">
           <span class="channel-number">04</span>
+          <h3>Crumby Island Surplus</h3>
+          <p>Merch, civic leftovers, public-access goods, and evidence-adjacent artifacts from the island counter.</p>
+          <a href="/merch.html">Open merch desk</a>
+        </article>
+        <article class="radio-channel">
+          <span class="channel-number">05</span>
           <h3>Lil’ Cabbage Country-Trap Hour</h3>
           <p>Rainy ferry blues, outlaw hooks, ChairGate fallout, and the soft heart hiding behind the flex.</p>
           <a href="#lil-cabbage-theme">Tune Raccoon Executive</a>
         </article>
         <article class="radio-channel">
-          <span class="channel-number">05</span>
+          <span class="channel-number">06</span>
           <h3>Marcy Daydream Soft Focus</h3>
           <p>Tender indie melancholy, hoodie-weather choruses, and songs that feel like staring through rainy glass.</p>
           <a href="#marcy-daydream-theme">Tune Dissolve</a>
         </article>
         <article class="radio-channel">
-          <span class="channel-number">06</span>
+          <span class="channel-number">07</span>
           <h3>Baie Verte B’ys Ghost-Folk</h3>
           <p>Salt-air stories, kitchen-party echoes, and Newfoundland folk signals from somewhere just offshore.</p>
           <a href="#baie-verte-bys-theme">Tune Fog</a>
         </article>
         <article class="radio-channel">
-          <span class="channel-number">07</span>
+          <span class="channel-number">08</span>
           <h3>SecretMXTP After Dark</h3>
           <p>Lo-fi tape ghosts, late-night Cumberland snapshots, and cassette-scene fragments from the edge of the woods.</p>
           <a href="/artists/secretmxtp.html">Tune secretmxtp</a>
         </article>
         <article class="radio-channel">
-          <span class="channel-number">08</span>
+          <span class="channel-number">09</span>
           <h3>SnackTrap Train Loops</h3>
           <p>Deutschrap for riding trains, offline loops, and low-light station-platform motion.</p>
           <a href="/artists/snacktrap.html">Tune SnackTrap</a>
         </article>
         <article class="radio-channel">
-          <span class="channel-number">09</span>
+          <span class="channel-number">10</span>
           <h3>Hushnoise Sleep Band</h3>
           <p>Ambient sleep loops, dim rooms, soft noise, and the station slowly drifting out past midnight.</p>
           <a href="/artists/hushnoise.html">Tune Hushnoise</a>
@@ -275,6 +292,6 @@
   </div>
 </footer>
 
-<script src="/assets/js/main.js"></script>
+<script src="/assets/js/main.js" defer></script>
 </body>
 </html>

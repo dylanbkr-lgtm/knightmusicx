@@ -15,4 +15,13 @@
 /knight              /artists/knight.html                 301
 /sparrow             /artists/dylan-sparrow.html          301
 /lore                /lore/                               301
+/shop                /merch.html                          301
+/surplus             /merch.html                          301
+/crumby-surplus      /merch.html                          301
+/favicon.ico         /favicon.svg                         301
+
+# Crumby Island Surplus domain
+https://crumbyislandsurplus.lol/*      https://knightmusicx.com/merch.html  301!
+https://www.crumbyislandsurplus.lol/*  https://knightmusicx.com/merch.html  301!
+
 /    /index.html   200

@@ -79,7 +79,7 @@ if (quiz) {
       name: 'secretmxtp',
       href: '/artists/secretmxtp.html',
       spotify: 'https://open.spotify.com/artist/4PeOpSW35ZXDxZIE1Oz6O5',
-      image: '/images/secretmxtp%20artist%20image%201.png',
+      image: '/images/secretmxtp%20artist%20image%201.webp',
       prompt: 'wet pavement tape ghost',
       copy: 'KMX assigned you secretmxtp. You are a wet pavement tape ghost: quiet shoes, bad weather, and songs that feel found in a jacket pocket.'
     },
@@ -87,7 +87,7 @@ if (quiz) {
       name: 'Marcy Daydream',
       href: '/artists/marcy-daydream.html',
       spotify: 'https://open.spotify.com/album/2PBPToTasAkbw7c1yzDjir',
-      image: '/images/MARCY%20DAYDREAM%20ARTIST%20PIC.PNG',
+      image: '/images/MARCY%20DAYDREAM%20ARTIST%20PIC.webp',
       prompt: 'hoodie-weather daydream',
       copy: 'KMX assigned you Marcy Daydream. You are hoodie-weather tenderness with a soft-focus exit plan and choruses that look out the window.'
     },
@@ -95,7 +95,7 @@ if (quiz) {
       name: 'CEDΛRHØLLØW',
       href: '/artists/ced-rh-ll-w.html',
       spotify: 'https://open.spotify.com/album/5xO8clzvEs2i48UZBXTFRs',
-      image: '/images/rain%20atlas%20cedarhollow%20artist.png',
+      image: '/images/rain%20atlas%20cedarhollow%20artist.webp',
       prompt: 'rain atlas transmission',
       copy: 'KMX assigned you CEDΛRHØLLØW. You are a rain atlas transmission: haunted synths, coastal rooms, and analog ghosts in the walls.'
     },
@@ -151,7 +151,7 @@ if (quiz) {
       name: 'K.N.I.G.H.T.',
       href: '/artists/knight.html',
       spotify: 'https://open.spotify.com/artist/5BSZCKPIxIESKFDLvP5ck2',
-      image: '/images/knight%20artist%20image.png',
+      image: '/images/knight%20artist%20image.webp',
       prompt: 'central broadcast anomaly',
       copy: 'KMX assigned you K.N.I.G.H.T. You are the central broadcast anomaly: no fixed address, just the signal holding the weird universe together.'
     },
@@ -159,7 +159,7 @@ if (quiz) {
       name: 'Sylphina Veyra',
       href: '/artists/sylphina.html',
       spotify: 'https://open.spotify.com/artist/4nHbl5M7v6hEa4OrwAUiMC',
-      image: '/images/sylphina.png',
+      image: '/images/sylphina.webp',
       prompt: 'ocean-lit pop drift',
       copy: 'KMX assigned you Sylphina Veyra. You are ocean-lit pop drift: shimmer, strange tides, and songs arriving from somewhere offshore.'
     }

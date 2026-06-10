@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Knight Music X">
+  <rect width="64" height="64" fill="#0b0c0f"/>
+  <path d="M10 12h11v18l14-18h13L30 33l19 19H35L21 37v15H10z" fill="#c8f060"/>
+  <path d="M46 10h8v8h-8zM49 40l7 12h-8l-4-7-4 7h-8l7-12-7-12h8l4 7 4-7h8z" fill="#60c8f0"/>
+</svg>

@@ -3,16 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Crumby Island Municipal Portal — Official Civic Website</title>
-  <meta name="description" content="Crumby Island Municipal Portal: civic alerts, incident files, known persons, public notices, and Cumberland Chronicles broadcasts.">
-  <meta property="og:title" content="Crumby Island Municipal Portal">
-  <meta property="og:description" content="ChairGate, the Fryspiracy, Zoo Crew activity, and the official unofficial civic record of Crumby Island.">
+  <title>Crumby Island Municipal Portal | Knight Music X Story World</title>
+  <meta name="description" content="Crumby Island is the fake civic/public access story world of Knight Music X: municipal alerts, incident files, artist collective lore, Zoo Crew activity, and Cumberland Chronicles broadcasts.">
+  <link rel="canonical" href="https://knightmusicx.com/crumby-island.html">
+  <link rel="alternate" hreflang="en" href="https://knightmusicx.com/crumby-island.html">
+  <link rel="alternate" hreflang="x-default" href="https://knightmusicx.com/crumby-island.html">
+  <meta property="og:title" content="Crumby Island Municipal Portal | Knight Music X">
+  <meta property="og:description" content="The official unofficial civic record of Crumby Island: ChairGate, the Fryspiracy, Zoo Crew activity, and coastal AI music lore.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/images/crumby%20island%20story%20project%202.png">
+  <meta property="og:url" content="https://knightmusicx.com/crumby-island.html">
+  <meta property="og:image" content="/images/crumby%20island%20story%20project%202.webp">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#1a1208">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&family=Bebas+Neue&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&family=Bebas+Neue&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&family=Bebas+Neue&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"></noscript>
+  <!-- Analytics placeholder: intentionally no tracking script yet. -->
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -99,7 +108,9 @@
     }
     .civic-nav { display: flex; list-style: none; }
     .civic-nav a {
-      display: block;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
       padding: .45rem .8rem;
       border-left: 1px solid rgba(242,234,216,.08);
       color: rgba(242,234,216,.58);
@@ -202,7 +213,7 @@
       align-items: center;
       justify-content: center;
       gap: .5rem;
-      min-height: 2.35rem;
+      min-height: 44px;
       padding: .7rem 1.15rem;
       border: 1px solid;
       background: transparent;
@@ -437,6 +448,83 @@
     .notice.sticky { background: #faf08a; }
     .notice.urgent { background: #ffd5d5; }
     .notice.official { background: #d5e8ff; }
+    .merch-mandate {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(230px, 320px);
+      gap: 1.5rem;
+      align-items: stretch;
+      background: var(--paper);
+      border: 2px solid var(--ink);
+      box-shadow: 4px 4px 0 rgba(26,18,8,.12);
+    }
+    .merch-mandate::before {
+      content: "MANDATORY";
+      position: absolute;
+      top: 1.2rem;
+      right: -2.3rem;
+      transform: rotate(30deg);
+      border: 3px solid var(--red);
+      padding: .25rem 2.4rem;
+      color: var(--red);
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: .15em;
+      opacity: .9;
+      pointer-events: none;
+    }
+    .merch-copy { padding: 1.5rem; }
+    .merch-kicker {
+      margin-bottom: .6rem;
+      color: var(--muted);
+      font-size: .55rem;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+    .merch-copy h3 {
+      margin-bottom: .8rem;
+      font-family: "Special Elite", cursive;
+      font-size: clamp(1.5rem, 4vw, 2.35rem);
+      line-height: 1;
+    }
+    .merch-copy p {
+      max-width: 58ch;
+      color: rgba(26,18,8,.72);
+      font-size: .76rem;
+      line-height: 1.7;
+    }
+    .merch-copy .hero-btns { margin-top: 1.1rem; }
+    .merch-file {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5rem;
+      background: var(--paper2);
+      border-left: 1px solid var(--border2);
+    }
+    .merch-file-row {
+      padding: .7rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .merch-file-row:last-child { border-bottom: 0; }
+    .merch-file-key {
+      color: var(--muted);
+      font-size: .5rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .merch-file-val {
+      margin-top: .18rem;
+      font-size: .78rem;
+      line-height: 1.35;
+    }
+    .merch-file-val a {
+      color: var(--red);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
     .episode-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
     .ep-card {
       display: block;
@@ -484,7 +572,8 @@
     .footer-seal { color: rgba(196,123,0,.42); font-family: "Bebas Neue", sans-serif; font-size: .9rem; letter-spacing: .15em; line-height: 1.3; text-align: right; }
     @media (max-width: 980px) {
       .civic-nav { display: none; }
-      .hero-inner, .incident-grid, .report-grid { grid-template-columns: 1fr; }
+      .hero-inner, .incident-grid, .report-grid, .merch-mandate { grid-template-columns: 1fr; }
+      .merch-file { border-left: 0; border-top: 1px solid var(--border2); }
       .char-grid { grid-template-columns: repeat(2, 1fr); }
       .bulletin-board { grid-template-columns: 1fr 1fr; }
       .episode-grid { grid-template-columns: 1fr 1fr; }
@@ -518,6 +607,7 @@
         <li><a href="#bulletin">Public Notices</a></li>
         <li><a href="#broadcasts">Broadcasts</a></li>
         <li><a href="#report">Report a Concern</a></li>
+        <li><a href="https://crumbyislandsurplus.lol">Mandatory Merch</a></li>
       </ul>
     </div>
     <div class="alert-bar">
@@ -552,6 +642,7 @@
             <a href="#broadcasts" class="btn btn-civic">Watch the Episodes</a>
             <a href="#incidents" class="btn btn-red">Active Incidents</a>
             <a href="#bulletin" class="btn btn-amber">Public Notices</a>
+            <a href="https://crumbyislandsurplus.lol" class="btn btn-civic">Mandatory Merch</a>
           </div>
         </div>
         <aside class="status-panel" aria-label="Island status current">
@@ -635,7 +726,7 @@
     <section id="characters">
       <div class="sec-head"><div class="sec-num">02</div><div><div class="sec-eyebrow">// Known Persons of Interest — Active Registry</div><h2 class="sec-title">Personnel Files</h2></div></div>
       <div class="char-grid">
-        <article class="char-card"><div class="char-stamp stamp-person">Person of<br>Interest</div><div class="char-img-wrap"><img src="/images/lilcabbageartist.jpeg" alt="Lil' Cabbage"></div><div class="char-role">Human Disaster</div><div class="char-name">Lil' Cabbage</div><p class="char-desc">Late-30s island menace. Mud-caked denim, floppy cowboy hat. Always feuding with the city. Deeply poetic when mad.</p></article>
+        <article class="char-card"><div class="char-stamp stamp-person">Person of<br>Interest</div><div class="char-img-wrap"><img src="/images/lilcabbageartist.jpeg" alt="Lil' Cabbage municipal personnel file portrait" loading="lazy" decoding="async"></div><div class="char-role">Human Disaster</div><div class="char-name">Lil' Cabbage</div><p class="char-desc">Late-30s island menace. Mud-caked denim, floppy cowboy hat. Always feuding with the city. Deeply poetic when mad.</p></article>
         <article class="char-card"><div class="char-stamp stamp-authorized">Authorized</div><div class="char-img-wrap"><div class="char-img-placeholder">BM</div></div><div class="char-role">Bylaw Authority</div><div class="char-name">Barb Melvin</div><p class="char-desc">Municipal fleece, clipboard grip of death, zero patience. Mastermind of ChairGate.</p></article>
         <article class="char-card"><div class="char-stamp stamp-deployed" style="font-size:.48rem">Under Duress</div><div class="char-img-wrap"><div class="char-img-placeholder">R</div></div><div class="char-role">CAPA Spokesperson</div><div class="char-name">Ronnie</div><p class="char-desc">Nervous, earnest, trapped. Just wants peace. Will issue a press release for anything.</p></article>
         <article class="char-card"><div class="char-stamp stamp-atlarge">At Large</div><div class="char-img-wrap"><div class="char-img-placeholder">TP</div></div><div class="char-role">Fry Strategist</div><div class="char-name">Trash Panda</div><p class="char-desc">Fast-talking raccoon in a greasy trench coat. Speaks in schemes. May be blueprinting fry tunnels.</p></article>
@@ -662,8 +753,29 @@
       </div>
     </section>
 
+    <section id="mandatory-merch">
+      <div class="sec-head"><div class="sec-num">04</div><div><div class="sec-eyebrow">// Civic Procurement Notice — Mandatory</div><h2 class="sec-title">Mandatory Merch</h2></div></div>
+      <article class="merch-mandate">
+        <div class="merch-copy">
+          <div class="merch-kicker">Crumby Island Surplus Desk</div>
+          <h3>Acquire Approved Island Goods</h3>
+          <p>All residents, visitors, and persons recently implicated in fry-related paperwork are strongly advised to visit the Crumby Island Surplus desk. Available items may include ChairGate compliance apparel, public-access caps, sticker evidence, broadcast posters, and other civic leftovers.</p>
+          <div class="hero-btns">
+            <a href="https://crumbyislandsurplus.lol" class="btn btn-red">Visit crumbyislandsurplus.lol</a>
+            <a href="/merch.html#goods" class="btn btn-civic">Browse Surplus Goods</a>
+          </div>
+        </div>
+        <div class="merch-file" aria-label="Mandatory merch status">
+          <div class="merch-file-row"><div class="merch-file-key">Desk Status</div><div class="merch-file-val">Open by public-access request</div></div>
+          <div class="merch-file-row"><div class="merch-file-key">Official Surplus Domain</div><div class="merch-file-val"><a href="https://crumbyislandsurplus.lol">crumbyislandsurplus.lol</a></div></div>
+          <div class="merch-file-row"><div class="merch-file-key">Island Currency</div><div class="merch-file-val">FryCoin still rejected</div></div>
+          <div class="merch-file-row"><div class="merch-file-key">Compliance</div><div class="merch-file-val">Technically mandatory, emotionally optional</div></div>
+        </div>
+      </article>
+    </section>
+
     <section id="broadcasts">
-      <div class="sec-head"><div class="sec-num">04</div><div><div class="sec-eyebrow">// Cumberland Chronicles — Official Record</div><h2 class="sec-title">Civic Broadcast Archive</h2></div></div>
+      <div class="sec-head"><div class="sec-num">05</div><div><div class="sec-eyebrow">// Cumberland Chronicles — Official Record</div><h2 class="sec-title">Civic Broadcast Archive</h2></div></div>
       <div class="episode-grid">
         <article class="ep-card"><div class="ep-video"><iframe src="https://www.youtube.com/embed/CIpx9rc_IIc" title="Cumberland Chronicles Episode 1: Fries" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="ep-info"><div class="ep-num">Episode 01 — Cumberland Chronicles</div><div class="ep-title">Fries</div><p class="ep-desc">The crew fights over bait fries on the dock. One fry hits the water. Daryl gives the first silent warning.</p><a href="https://youtu.be/CIpx9rc_IIc" class="ep-link" target="_blank" rel="noreferrer">Watch on YouTube ›</a></div></article>
         <article class="ep-card"><div class="ep-video"><iframe src="https://www.youtube.com/embed/OTxvZctX77o" title="Cumberland Chronicles Episode 2: Bullheads" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="ep-info"><div class="ep-num">Episode 02 — Cumberland Chronicles</div><div class="ep-title">Bullheads</div><p class="ep-desc">The crew is broke, hungry, and staring at the dumb idea that starts the Bullhead Derby scam.</p><a href="https://youtu.be/OTxvZctX77o" class="ep-link" target="_blank" rel="noreferrer">Watch on YouTube ›</a></div></article>
@@ -675,7 +787,7 @@
     </section>
 
     <section id="report">
-      <div class="sec-head"><div class="sec-num">05</div><div><div class="sec-eyebrow">// Report a Concern — Reduced Staff</div><h2 class="sec-title">Public Counter Links</h2></div></div>
+      <div class="sec-head"><div class="sec-num">06</div><div><div class="sec-eyebrow">// Report a Concern — Reduced Staff</div><h2 class="sec-title">Public Counter Links</h2></div></div>
       <div class="report-grid">
         <article class="report-card"><h3>YouTube Records Desk</h3><p>Music videos, scenes, lore fragments, and public-access-grade town panic.</p><a href="https://www.youtube.com/@Lil_Cabbage_X" target="_blank" rel="noreferrer">Visit YouTube →</a></article>
         <article class="report-card"><h3>TikTok Notice Window</h3><p>Short-form Crumby energy, hooks, bits, and weird local prophecy in vertical form.</p><a href="https://www.tiktok.com/@lilcabbagex?lang=en" target="_blank" rel="noreferrer">Visit TikTok →</a></article>
