@@ -2068,6 +2068,7 @@ body {
   .hero-stat { min-width: 0; }
   .hero-ticker { padding-inline: 1rem; }
   .hero-ticker > span { display: none; }
+  .ticker-inner { animation-duration: 38s; }
   .listen-heading { display: block; }
   .featured-context,
   .playlist-panel > div,
@@ -2100,7 +2101,7 @@ body {
   .hero-eyebrow { font-size: .62rem; letter-spacing: .1em; }
   .hero h1 { font-size: clamp(3.4rem, 21vw, 5rem); }
   .hero-panel { grid-template-columns: 1fr; }
-  .ticker-inner { gap: 2rem; animation-duration: 24s; }
+  .ticker-inner { gap: 2rem; animation-duration: 46s; }
   .featured-context,
   .featured-embed,
   .playlist-panel > div,
