@@ -1,6 +1,41 @@
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
+const contactForm = document.querySelector('[data-contact-form]');
+if (contactForm) {
+  const submitButton = contactForm.querySelector('[data-contact-submit]');
+  const statusMessage = contactForm.querySelector('[data-contact-status]');
+
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+    statusMessage.textContent = 'Opening a clear channel...';
+    statusMessage.classList.remove('is-success', 'is-error');
+
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      });
+
+      if (!response.ok) throw new Error('Submission failed');
+
+      contactForm.reset();
+      statusMessage.textContent = 'Transmission received. We will tune in soon.';
+      statusMessage.classList.add('is-success');
+    } catch (error) {
+      statusMessage.innerHTML = 'The signal did not leave the island. Email <a href="mailto:contact@knightmusicx.com">contact@knightmusicx.com</a> instead.';
+      statusMessage.classList.add('is-error');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Send Transmission';
+    }
+  });
+}
+
 document.querySelectorAll('[data-embed-tab]').forEach((button) => {
   button.addEventListener('click', () => {
     const target = button.dataset.embedTab;

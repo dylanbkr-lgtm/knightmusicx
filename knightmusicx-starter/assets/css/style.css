@@ -2192,6 +2192,11 @@ body {
   font-size: .75rem;
 }
 
+.form-note.is-success { color: var(--focus); }
+.form-note.is-error { color: #ff8e82; }
+.form-note a { color: inherit; }
+.contact-form button:disabled { cursor: wait; opacity: .65; }
+
 .transmission-confirmation {
   display: grid;
   min-height: calc(100vh - 150px);
