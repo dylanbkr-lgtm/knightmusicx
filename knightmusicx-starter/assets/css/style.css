@@ -1799,6 +1799,243 @@ body {
   color: var(--muted);
 }
 
+/* Release calendar */
+.release-calendar-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0 3.5rem;
+  border-bottom: 1px solid var(--border);
+  background:
+    linear-gradient(rgba(11,12,15,.72), rgba(11,12,15,.96)),
+    url('/images/KNIGHT%20MUSIX%20X%20GROUP%20PHOTO.jpeg') center 34% / cover;
+}
+
+.release-calendar-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .48fr);
+  gap: 2rem;
+  align-items: end;
+}
+
+.release-calendar-hero h1 {
+  margin: .65rem 0 1rem;
+  font-size: clamp(4rem, 9vw, 8rem);
+  line-height: .82;
+}
+
+.release-calendar-hero p {
+  max-width: 620px;
+  color: #d4d4d8;
+  font-size: 1.05rem;
+}
+
+.release-status {
+  padding: 1.25rem;
+  border: 1px solid rgba(193,243,125,.3);
+  border-radius: 8px;
+  background: rgba(11,12,15,.84);
+  backdrop-filter: blur(8px);
+}
+
+.release-status span,
+.release-status strong {
+  display: block;
+}
+
+.release-status span {
+  color: var(--focus);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.release-status strong {
+  margin-top: .65rem;
+  font-size: 1.25rem;
+}
+
+.release-status p {
+  margin: .45rem 0 0;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.release-calendar-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.calendar-panel,
+.release-agenda {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+}
+
+.calendar-toolbar {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.calendar-toolbar h2 {
+  margin: .25rem 0 0;
+  font-size: 1.7rem;
+}
+
+.calendar-nav {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  background: rgba(255,255,255,.03);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.calendar-nav:hover,
+.calendar-nav:focus-visible {
+  border-color: var(--focus);
+  color: var(--focus);
+}
+
+.calendar-weekdays,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.calendar-weekdays {
+  border-bottom: 1px solid var(--border);
+}
+
+.calendar-weekdays span {
+  padding: .65rem .4rem;
+  color: var(--muted);
+  font-size: .64rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.calendar-day {
+  min-width: 0;
+  min-height: 112px;
+  padding: .55rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.calendar-day:nth-child(7n) { border-right: 0; }
+.calendar-day:nth-last-child(-n + 7) { border-bottom: 0; }
+.calendar-day.outside-month { opacity: .3; }
+
+.calendar-day > time {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+.calendar-day.is-today > time {
+  border-radius: 50%;
+  color: #090a0c;
+  background: var(--focus);
+  font-weight: 900;
+}
+
+.calendar-day a {
+  display: block;
+  margin-top: .35rem;
+  padding: .45rem;
+  border-left: 3px solid var(--focus);
+  color: var(--text);
+  background: rgba(193,243,125,.08);
+  text-decoration: none;
+}
+
+.calendar-day a small,
+.calendar-day a strong,
+.calendar-day a span { display: block; }
+.calendar-day a small { color: var(--focus); font-size: .55rem; text-transform: uppercase; }
+.calendar-day a strong { overflow: hidden; margin-top: .18rem; font-size: .72rem; text-overflow: ellipsis; white-space: nowrap; }
+.calendar-day a span { overflow: hidden; color: var(--muted); font-size: .65rem; text-overflow: ellipsis; white-space: nowrap; }
+
+.release-agenda-head {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.release-agenda-head h2 {
+  margin: .25rem 0 0;
+  font-size: 1.7rem;
+}
+
+.release-empty {
+  padding: 2rem 1.25rem;
+}
+
+.release-empty span {
+  color: #f0b35e;
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.release-empty p {
+  margin: .65rem 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.agenda-item {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: .75rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.agenda-item time { color: var(--focus); font-weight: 900; }
+.agenda-item small,
+.agenda-item strong { display: block; }
+.agenda-item small { color: var(--muted); font-size: .62rem; text-transform: uppercase; }
+.agenda-item strong { margin-top: .25rem; }
+
+.release-roster-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin-top: 1rem;
+}
+
+.release-roster-links a {
+  padding: .7rem .85rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.release-roster-links a:hover,
+.release-roster-links a:focus-visible {
+  border-color: var(--focus);
+  color: var(--focus);
+}
+
 @media (max-width: 800px) {
   .site-header .wrap { align-items: flex-start; flex-direction: column; gap: .55rem; }
   .nav { justify-content: flex-start; gap: .45rem .75rem; }
@@ -1812,6 +2049,8 @@ body {
   .radio-hero-grid,
   .radio-player-grid,
   .radio-show-grid { grid-template-columns: 1fr; }
+  .release-calendar-hero-grid,
+  .release-calendar-layout { grid-template-columns: 1fr; }
   .hero { min-height: 0; }
   .hero-wrap { padding-block: 2.5rem; }
   .hero-copy {
@@ -1901,6 +2140,13 @@ body {
     grid-template-columns: 1fr;
     gap: .35rem;
   }
+  .release-calendar-hero { padding: 3rem 0 2.5rem; }
+  .release-calendar-hero h1 { font-size: clamp(3.6rem, 19vw, 5.6rem); }
+  .calendar-day { min-height: 70px; padding: .3rem; }
+  .calendar-weekdays span { font-size: .52rem; }
+  .calendar-day a { padding: .3rem; }
+  .calendar-day a small,
+  .calendar-day a span { display: none; }
 }
 
 .artist-grid a:hover,
