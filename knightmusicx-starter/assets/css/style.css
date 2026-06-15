@@ -2169,6 +2169,13 @@ body {
 .artist-grid a:hover .artist-name,
 .artist-grid a:focus-visible .artist-name { color: var(--focus); }
 
+.artist-platform-note {
+  max-width: 46ch;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
 /* Card hover */
 .card {
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;

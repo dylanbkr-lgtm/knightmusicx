@@ -86,7 +86,7 @@ if (quiz) {
     'marcy-daydream': {
       name: 'Marcy Daydream',
       href: '/artists/marcy-daydream.html',
-      spotify: 'https://open.spotify.com/album/2PBPToTasAkbw7c1yzDjir',
+      spotify: 'https://open.spotify.com/artist/6NkpRJhd9in8Syp4gT3ka9',
       image: '/images/MARCY%20DAYDREAM%20ARTIST%20PIC.webp',
       prompt: 'hoodie-weather daydream',
       copy: 'KMX assigned you Marcy Daydream. You are hoodie-weather tenderness with a soft-focus exit plan and choruses that look out the window.'
@@ -94,7 +94,7 @@ if (quiz) {
     cedarhollow: {
       name: 'CEDΛRHØLLØW',
       href: '/artists/ced-rh-ll-w.html',
-      spotify: 'https://open.spotify.com/album/5xO8clzvEs2i48UZBXTFRs',
+      spotify: 'https://open.spotify.com/artist/0Xrpw6DaqkGt4eCRjUhZua',
       image: '/images/rain%20atlas%20cedarhollow%20artist.webp',
       prompt: 'rain atlas transmission',
       copy: 'KMX assigned you CEDΛRHØLLØW. You are a rain atlas transmission: haunted synths, coastal rooms, and analog ghosts in the walls.'
@@ -126,7 +126,7 @@ if (quiz) {
     'dylan-sparrow': {
       name: 'Dylan Sparrow',
       href: '/artists/dylan-sparrow.html',
-      spotify: '',
+      spotify: 'https://open.spotify.com/artist/0jy9qIqvn1BmaP9CLBTZDw',
       image: '/images/Dylan%20Sparrow%20fire.jpg',
       prompt: 'campfire weather confession',
       copy: 'KMX assigned you Dylan Sparrow. You are a campfire weather confession: honest, road-dusted, and staring into the middle distance with purpose.'
@@ -142,7 +142,7 @@ if (quiz) {
     'baie-verte-bys': {
       name: 'Baie Verte B’ys',
       href: '/artists/baie-verte-bys.html',
-      spotify: '',
+      spotify: 'https://open.spotify.com/album/0MEM1I4mQUpKib3i5n9XSK',
       image: '/images/BAIE%20VERTE%20BYS%20ARTIST%20PIC.jpg',
       prompt: 'Atlantic ghost-folk shoreline',
       copy: 'KMX assigned you Baie Verte B’ys. You are Atlantic ghost-folk: cold coastal summer, weathered shoreline, and a chorus that knows the old roads.'
