@@ -2176,6 +2176,45 @@ body {
   font-size: .85rem;
 }
 
+.form-trap {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.form-note {
+  margin: .75rem 0 0;
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+.transmission-confirmation {
+  display: grid;
+  min-height: calc(100vh - 150px);
+  place-items: center;
+  background:
+    linear-gradient(rgba(11,12,15,.78), rgba(11,12,15,.98)),
+    url('/images/coastal%20static%20image.webp') center / cover;
+}
+
+.transmission-confirmation .wrap { width: min(100% - 2rem, 900px); }
+
+.transmission-confirmation h1 {
+  margin: .75rem 0 1rem;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: .85;
+}
+
+.transmission-confirmation p {
+  max-width: 570px;
+  color: #d4d4d8;
+  font-size: 1.05rem;
+}
+
 /* Card hover */
 .card {
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;

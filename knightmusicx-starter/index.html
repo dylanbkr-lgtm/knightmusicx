@@ -416,14 +416,17 @@
             <a href="https://www.facebook.com/Cabbagepatchtrap" target="_blank" rel="noreferrer" aria-label="Facebook">Facebook</a>
           </div>
         </div>
-        <form name="contact" method="POST" data-netlify="true" class="contact-form">
+        <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
           <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="subject" value="New Knight Music X transmission">
+          <p class="form-trap" aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <div class="row">
             <label><span>Name</span><input type="text" name="name" required></label>
             <label><span>Email</span><input type="email" name="email" required></label>
           </div>
           <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
           <button type="submit" class="btn primary">Send Transmission</button>
+          <p class="form-note">Delivered securely through the Knight Music X Netlify transmission desk.</p>
         </form>
       </div>
     </div>
